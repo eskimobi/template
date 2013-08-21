@@ -1,0 +1,63 @@
+/*---------------------------
+---------- basics  ----------
+----------------------------*/
+@max-width: 768px;
+
+@pad: 0.5em;
+@pad2: @pad*1.6;
+@pad3: @pad*2.8;
+@pad-list: @pad*1.5;
+
+/*h1*/
+@xxxl: 1.8em;
+/*h2*/
+@xxl: 1.6em;
+/*h3*/
+@xl: 1.4em;
+/*h4*/
+@l: 1.2em;
+/*p*/
+@normal: 1em;
+/*small*/
+@small: 0.9em;
+/*tiny*/
+@tiny: 0.75em;
+
+.xxxlarge(){font-size: @xxxl;}
+.xxlarge(){font-size: @xxl;}
+.xlarge(){font-size: @xl;}
+.large(){font-size: @l;}
+.normal(){font-size: @normal;}
+.small(){font-size: @small;}
+.tiny(){font-size: @tiny;}
+
+/*---------------------------
+---------- colors  ----------
+----------------------------*/
+@color-txt: #000;
+@color-back: #fff;
+@color-back2: darken(@color-link,10%);
+@color-hidden: #eee;
+@color-footer: none;
+
+@color-link: #2c74eb;
+@color-link-hover: @color-link2;
+@color-link2: #de1e25;
+
+@grey: #777;
+@grey2: #eee;
+
+/*---------------------------
+---------- imports ----------
+----------------------------*/
+@import 'normalize.less';
+@import 'vars.less';
+@import 'style-base.less';
+@import 'extras.less';
+@import 'slider.less';
+@import 'buttons.less';
+/*включаем только для стандартного шаблона магазинов*/
+/*@import 'shop.less';*/
+/*------------------------------*/
+@import 'webfont.less';
+@import 'end.less';

@@ -1,0 +1,2271 @@
+/*---------------------------
+---------- basics  ----------
+----------------------------*/
+/*h1*/
+/*h2*/
+/*h3*/
+/*h4*/
+/*p*/
+/*small*/
+/*tiny*/
+/*---------------------------
+---------- colors  ----------
+----------------------------*/
+/*---------------------------
+---------- imports ----------
+----------------------------*/
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+[hidden] {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Sets default font family to sans-serif.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+
+}
+/*
+ * Removes default margin.
+ */
+body {
+  margin: 0;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+/*h1 {
+    font-size: 1.4em;
+}*/
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/*
+ * Sets consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+
+  padding: 0;
+  /* 2 */
+
+}
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+
+  font-size: 100%;
+  /* 2 */
+
+  margin: 0;
+  /* 3 */
+
+}
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+
+  cursor: pointer;
+  /* 3 */
+
+}
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+
+  padding: 0;
+  /* 2 */
+
+}
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+
+  box-sizing: content-box;
+}
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+
+  vertical-align: top;
+  /* 2 */
+
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.unsel {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+body {
+  overflow-x: hidden;
+  background: #ffffff;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #000000;
+  font-size: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+img {
+  display: block !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+}
+#eski-root {
+  width: 100%;
+  background: #ffffff;
+}
+.wrap {
+  margin: 0 auto;
+  max-width: 768px;
+}
+.content {
+  padding: 0.8em;
+}
+.content.zero-up {
+  padding-top: 0;
+}
+.content.zero-down {
+  padding-bottom: 0;
+}
+/*---------------------------
+---------- header  ----------
+----------------------------*/
+.header {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  /*position: fixed;*/
+
+  width: 100%;
+}
+/*header-styles*/
+.header-bar {
+  /*position: relative;*/
+
+  width: 100%;
+  z-index: 99;
+  margin: 0;
+  border: 0;
+  background: #2c74eb;
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.header-bar .inside {
+  padding: 0.4em 0.5em;
+}
+.header-bar table {
+  width: 100%;
+}
+.header-bar table tr td {
+  padding: 0;
+  width: auto !important;
+}
+.header-bar .logo {
+  display: block;
+  height: 40px;
+}
+.header-bar .logo img {
+  width: auto !important;
+  height: 100% !important;
+}
+.header-bar .btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 0.5em;
+  min-width: 54px;
+  text-decoration: none;
+}
+.header-bar .btn span {
+  margin: 0 auto;
+}
+.header-bar .active {
+  color: #fff !important;
+  text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.9) !important;
+}
+.header-bar .inside {
+  padding: 0;
+}
+.header-bar .logo {
+  padding: 0.5em;
+  border: 0;
+  box-shadow: none;
+  display: inline-block;
+}
+.header-bar .btn {
+  display: block;
+  padding: 0.5em;
+  width: 55.199999999999996px;
+  height: 46px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: -1px 0 0 rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  text-align: center;
+}
+.header-bar .btn span {
+  display: block;
+  margin-top: 6.571428571428571px;
+}
+.cart {
+  width: auto !important;
+}
+.cart span {
+  display: block;
+  float: left;
+}
+.cart-count {
+  display: inline-block;
+  box-sizing: content-box;
+  margin-left: 3px !important;
+  padding: 3.25px 3.095238095238095px 0 3.095238095238095px;
+  min-width: 10.4px;
+  height: 13px;
+  border-radius: 13px;
+  background: #2c74eb;
+  color: white;
+  text-align: center;
+  font-size: 10.4px;
+  line-height: 10.4px;
+}
+.style-0 .btn {
+  width: auto;
+}
+.style-1 {
+  background: #e97071;
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.2), 0px 3px 0px rgba(0, 0, 0, 0.08);
+}
+.style-1 .active {
+  background: #d32022;
+}
+.style-1 .cart-count {
+  background: #ffffff;
+  color: #e97071;
+}
+.style-2 {
+  background: #3fd7cb;
+  background: -moz-linear-gradient(top, #3fd7cb 0%, #23a79c 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3fd7cb), color-stop(100%, #23a79c));
+  background: -webkit-linear-gradient(top, #3fd7cb 0%, #23a79c 100%);
+  background: -o-linear-gradient(top, #3fd7cb 0%, #23a79c 100%);
+  background: -ms-linear-gradient(top, #3fd7cb 0%, #23a79c 100%);
+  background: linear-gradient(to bottom, #3fd7cb 0%, #23a79c 100%);
+  box-shadow: inset 0px -1px 3px #3fd7cb, inset 0px -1px 0px rgba(0, 0, 0, 0.9), 0px 1px 4px rgba(0, 0, 0, 0.2);
+}
+.style-2 .btn {
+  border: 0;
+  box-shadow: none;
+  color: #1e9289;
+  text-shadow: 0 1px 0 #3fd7cb;
+}
+.style-2 .logo img {
+  margin: 0 auto;
+}
+a.tel {
+  display: block;
+  padding: 0;
+}
+.search-block {
+  position: relative;
+}
+.search-block input,
+.search-block button {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1;
+}
+.search-block button {
+  border: 0;
+  appearance: none;
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.25em;
+  margin: 0.25em;
+}
+.categories,
+.categories2,
+ul.dropdown,
+ul.group {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.categories li,
+.categories2 li,
+ul.dropdown li,
+ul.group li {
+  position: relative;
+}
+.categories a,
+.categories2 a,
+ul.dropdown a,
+ul.group a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+}
+.categories a:after,
+.categories2 a:after,
+ul.dropdown a:after,
+ul.group a:after {
+  font-family: 'fontello';
+  -webkit-font-smoothing: antialiased;
+  content: '\e75e';
+  position: absolute;
+  right: 0;
+  top: 0.75em;
+  margin-right: 0.75em;
+  color: #2c74eb;
+}
+.no-chevron:after {
+  display: none !important;
+}
+.categories {
+  margin: 0.5em 0 0 0;
+}
+ul.dropdown {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.dropdown li {
+  margin: 0;
+  padding: 0;
+}
+ul.dropdown li:nth-child(1) a {
+  box-shadow: none;
+}
+ul.dropdown li:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+ul.dropdown li a {
+  display: block;
+  padding: 0.75em;
+  background: #eeeeee;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.6), 0px -1px 0px rgba(0, 0, 0, 0.15);
+  color: #777777;
+  text-decoration: none;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+}
+ul.dropdown a:hover,
+ul.group a:hover {
+  background: #de1e25;
+  color: #ffffff;
+  text-shadow: none;
+}
+ul.dropdown a:hover:after,
+ul.group a:hover:after {
+  color: #ffffff;
+}
+/*---------------------------
+------ text, headings  ------
+----------------------------*/
+a {
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -ms-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  display: inline-block;
+  padding: 0.25em 0;
+  color: #2c74eb;
+  font-weight: bold;
+  word-break: break-word;
+}
+.bold {
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h1 a,
+h2 a,
+h3 a {
+  padding: 0;
+}
+h1 {
+  font-weight: bold;
+  font-size: 1.8em !important;
+}
+h2 {
+  font-weight: bold;
+  font-size: 1.6em !important;
+}
+h3 {
+  font-weight: bold;
+  font-size: 1.4em !important;
+}
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-size: 1.2em !important;
+  margin: 0 !important;
+}
+p {
+  margin: 0;
+  margin-bottom: 0.5em;
+  width: auto !important;
+  font-size: 1em !important;
+  line-height: 120% !important;
+  height: auto !important;
+}
+p a {
+  padding: 0 !important;
+}
+ul,
+ol {
+  margin: 0.25em 0 0 0;
+  padding-left: 1.6em;
+}
+ul li,
+ol li {
+  line-height: 1.4em;
+}
+ul a,
+ol a {
+  padding: 0;
+}
+table,
+form,
+input,
+select,
+textarea,
+iframe,
+object {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  font-size: 1em !important;
+}
+label {
+  display: block;
+  margin-bottom: 0.25em;
+  letter-spacing: -0.5px;
+  font-weight: bold;
+  font-size: 90%;
+}
+input,
+select,
+textarea {
+  padding: 0.25em !important;
+  font-size: 1.2em !important;
+}
+.light {
+  font-weight: normal;
+}
+/*---------------------------
+--------- navigation --------
+----------------------------*/
+/*navigation colors*/
+.nav {
+  background: #357aec;
+  background: -moz-linear-gradient(top, #357aec 0%, #145bd0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #357aec), color-stop(100%, #145bd0));
+  background: -webkit-linear-gradient(top, #357aec 0%, #145bd0 100%);
+  background: -o-linear-gradient(top, #357aec 0%, #145bd0 100%);
+  background: -ms-linear-gradient(top, #357aec 0%, #145bd0 100%);
+  background: linear-gradient(to bottom, #357aec 0%, #145bd0 100%);
+  position: relative;
+  z-index: 99;
+  overflow-x: hidden;
+  border-bottom: 1px solid #0d3c8a;
+  box-shadow: 0px 0.16666666666666666em 0.5em rgba(0, 0, 0, 0.3);
+  font-size: 90%;
+}
+.nav .inside {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+.nav .inside ul {
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  white-space: nowrap;
+}
+.nav .inside ul li a {
+  color: #fff;
+  text-shadow: 0px 1px 0px #0b3273, 0px 2px 3px #1357c7;
+  float: left;
+  margin: 0;
+  padding: 0.85em 0;
+  width: 33.33333%;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  font-weight: bold;
+  font-size: 95%;
+}
+.nav .inside ul li a.active {
+  background: #570c0f;
+  background: -moz-linear-gradient(top, #570c0f 0%, #de1e25 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #570c0f), color-stop(100%, #de1e25));
+  background: -webkit-linear-gradient(top, #570c0f 0%, #de1e25 100%);
+  background: -o-linear-gradient(top, #570c0f 0%, #de1e25 100%);
+  background: -ms-linear-gradient(top, #570c0f 0%, #de1e25 100%);
+  background: linear-gradient(to bottom, #570c0f 0%, #de1e25 100%);
+  text-shadow: 0px 1px 0px #572d00, 0px 0px 10px #ffffff;
+  -webkit-box-shadow: inset 0px 3px 10px #570c0f;
+  -moz-box-shadow: inset 0px 3px 10px #570c0f;
+  box-shadow: inset 0px 3px 10px #570c0f;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.nav .inside ul li:nth-child(1) a {
+  border-left: none;
+}
+.nav .inside ul li:nth-last-child(1) a {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-right: none;
+}
+/*---------------------------
+----------- icons -----------
+----------------------------*/
+.icons {
+  clear: both;
+}
+.icons .icon {
+  display: block;
+  float: left;
+  margin: 0 0 0.8em 0;
+}
+.icons .icon a {
+  margin: 0;
+  padding: 0;
+  padding: 0.8em;
+  width: 100%;
+}
+.icons .icon a .img,
+.icons .icon a .txt {
+  float: left;
+}
+.icons .icon a .img {
+  width: 20%;
+}
+.icons .icon a .img img {
+  margin: 0 auto;
+}
+.icons .icon a .txt {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0.5em;
+  width: 80%;
+  text-align: left;
+}
+/*-------------------------*/
+/*———— tables & blocks ————*/
+/*-------------------------*/
+/*выравнивание по центру*/
+.x {
+  margin: 0 auto;
+  text-align: center;
+}
+/*колонки*/
+.x10,
+.x20,
+.x30,
+.x33,
+.x40,
+.x50,
+.x60,
+.x70,
+.x80,
+.x90 {
+  width: 100%;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.x-start-50 {
+  width: 50% !important;
+}
+.clear {
+  clear: both;
+}
+/*footer styling*/
+/*colors*/
+.pre-footer {
+  background: #b3b3b3;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(left, #ffffff 0%, #b3b3b3 50%, #ffffff 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(50%, #b3b3b3), color-stop(100%, #ffffff));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(left, #ffffff 0%, #b3b3b3 50%, #ffffff 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(left, #ffffff 0%, #b3b3b3 50%, #ffffff 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(left, #ffffff 0%, #b3b3b3 50%, #ffffff 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to right, #ffffff 0%, #b3b3b3 50%, #ffffff 100%);
+  /* W3C */
+
+  display: block;
+  margin: 0.5em 0 0 0;
+  height: 1px;
+}
+footer {
+  background: none;
+}
+footer a {
+  line-height: 1;
+}
+.navi-bottom {
+  display: block;
+  margin: 0.5em 0;
+  width: 100%;
+  text-align: center;
+}
+.navi-bottom ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.navi-bottom ul li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.navi-bottom ul li a {
+  display: inline-block;
+  margin: 0;
+  padding: 0.25em 0.7em;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+a.full {
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  margin: 0.25em 0;
+  padding: 0.5em 1em;
+  background: #2c74eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.author {
+  margin: 0.8em 0;
+}
+.author a {
+  /*margin: @pad 0 @pad2 0;
+  	padding: @pad;
+  	font-size: @tiny;
+  	background: @blue2;*/
+
+  /*text-decoration: none;
+  	color: #fff;*/
+  text-decoration: none;
+  padding: 0;
+  font-size: 0.75em;
+}
+.author a .txt {
+  display: inline-block;
+  color: #2c74eb;
+  line-height: 130%;
+  border-bottom: 1px solid #89b1f4;
+}
+.eski-mobi-icon {
+  display: inline-block;
+  margin-bottom: -4px;
+  margin-right: 4px;
+  position: relative;
+}
+.eski-mobi-icon span {
+  display: block;
+  position: absolute;
+}
+.eski-mobi-icon .body {
+  background: #31c5b9;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+.eski-mobi-icon .p1,
+.eski-mobi-icon .p2 {
+  width: 8px;
+  height: 4px;
+  left: 4px;
+}
+.eski-mobi-icon .p1 {
+  background: #000;
+  top: 4px;
+}
+.eski-mobi-icon .p2 {
+  background: #fff;
+  top: 8px;
+}
+.ajax {
+  -webkit-border-radius: 3em;
+  -moz-border-radius: 3em;
+  border-radius: 3em;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  background: #2c74eb;
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.ajax:after {
+  content: "...";
+}
+ul.group {
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0 1px 0.5em rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 0.5em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 0.5em rgba(0, 0, 0, 0.4);
+  margin: 0.5em 0;
+  padding: 0;
+  list-style: none;
+}
+ul.group li a {
+  max-height: 60px;
+}
+ul.group li a {
+  display: block;
+  padding: 0.75em;
+  border: #ccc 1px solid;
+  border-top: none;
+  background: #fff;
+  text-decoration: none;
+}
+ul.group li.more a {
+  background: #ddd;
+  color: #777;
+  letter-spacing: 1px;
+}
+ul.group li:nth-child(1) a {
+  border-top: #ccc 1px solid;
+  -webkit-border-radius: 0.5em 0.5em 0px 0px;
+  border-radius: 0.5em 0.5em 0px 0px;
+}
+ul.group li:nth-last-child(1) a {
+  -webkit-border-radius: 0px 0px 0.5em 0.5em;
+  border-radius: 0px 0px 0.5em 0.5em;
+}
+.mobile-only {
+  /*только в мобильной версии, скрываем на планшетах*/
+
+}
+.tablet-only {
+  display: none;
+}
+::-moz-selection {
+  background: #65a9cc;
+  color: #f7f7f7;
+}
+::selection {
+  background: #65a9cc;
+  color: #f7f7f7;
+}
+#jPanelMenu-menu {
+  background: #000;
+}
+nav ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+nav ul li a {
+  color: #eeeeee;
+  display: block;
+  padding: 0.8em;
+  text-decoration: none;
+  border-bottom: 1px solid #777777;
+}
+.cs3 {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 3em;
+}
+.cs3-pagination {
+  margin-top: 0.8em;
+  clear: both;
+  text-align: center;
+}
+.cs3-pagination-switch {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 6px;
+  -webkit-border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  border-radius: 0.8em;
+}
+.cs3-pagination-switch.cs3-active-switch {
+  background: #2c74eb;
+}
+.btn-theme {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #1561de;
+  background: -moz-linear-gradient(top, #699cf1 0%, #1561de 50%, #1357c7 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #699cf1), color-stop(50%, #1561de), color-stop(100%, #1357c7));
+  background: -webkit-linear-gradient(top, #699cf1 0%, #1561de 50%, #1357c7 100%);
+  background: -o-linear-gradient(top, #699cf1 0%, #1561de 50%, #1357c7 100%);
+  background: -ms-linear-gradient(top, #699cf1 0%, #1561de 50%, #1357c7 100%);
+  background: linear-gradient(to bottom, #699cf1 0%, #1561de 50%, #1357c7 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-theme:active,
+.btn-theme.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.2);
+  background: #0e4298;
+  background: -moz-linear-gradient(top, #0e4298 0%, #1357c7 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0e4298), color-stop(100%, #1357c7));
+  background: -webkit-linear-gradient(top, #0e4298 0%, #1357c7 100%);
+  background: -o-linear-gradient(top, #0e4298 0%, #1357c7 100%);
+  background: -ms-linear-gradient(top, #0e4298 0%, #1357c7 100%);
+  background: linear-gradient(to bottom, #0e4298 0%, #1357c7 100%);
+}
+.btn-white {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #000000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #eeeeee;
+  background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 50%, #e1e1e1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #eeeeee), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 50%, #e1e1e1 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #eeeeee 50%, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #eeeeee 50%, #e1e1e1 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #eeeeee 50%, #e1e1e1 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-white:active,
+.btn-white.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.1);
+  background: #c8c8c8;
+  background: -moz-linear-gradient(top, #c8c8c8 0%, #e1e1e1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c8c8c8), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, #c8c8c8 0%, #e1e1e1 100%);
+  background: -o-linear-gradient(top, #c8c8c8 0%, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, #c8c8c8 0%, #e1e1e1 100%);
+  background: linear-gradient(to bottom, #c8c8c8 0%, #e1e1e1 100%);
+}
+.btn-grey {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #000000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #999999;
+  background: -moz-linear-gradient(top, #cccccc 0%, #999999 50%, #8c8c8c 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cccccc), color-stop(50%, #999999), color-stop(100%, #8c8c8c));
+  background: -webkit-linear-gradient(top, #cccccc 0%, #999999 50%, #8c8c8c 100%);
+  background: -o-linear-gradient(top, #cccccc 0%, #999999 50%, #8c8c8c 100%);
+  background: -ms-linear-gradient(top, #cccccc 0%, #999999 50%, #8c8c8c 100%);
+  background: linear-gradient(to bottom, #cccccc 0%, #999999 50%, #8c8c8c 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-grey:active,
+.btn-grey.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.1);
+  background: #737373;
+  background: -moz-linear-gradient(top, #737373 0%, #8c8c8c 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #737373), color-stop(100%, #8c8c8c));
+  background: -webkit-linear-gradient(top, #737373 0%, #8c8c8c 100%);
+  background: -o-linear-gradient(top, #737373 0%, #8c8c8c 100%);
+  background: -ms-linear-gradient(top, #737373 0%, #8c8c8c 100%);
+  background: linear-gradient(to bottom, #737373 0%, #8c8c8c 100%);
+}
+.btn-black {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #333333;
+  background: -moz-linear-gradient(top, #666666 0%, #333333 50%, #262626 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #666666), color-stop(50%, #333333), color-stop(100%, #262626));
+  background: -webkit-linear-gradient(top, #666666 0%, #333333 50%, #262626 100%);
+  background: -o-linear-gradient(top, #666666 0%, #333333 50%, #262626 100%);
+  background: -ms-linear-gradient(top, #666666 0%, #333333 50%, #262626 100%);
+  background: linear-gradient(to bottom, #666666 0%, #333333 50%, #262626 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-black:active,
+.btn-black.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.2);
+  background: #0d0d0d;
+  background: -moz-linear-gradient(top, #0d0d0d 0%, #262626 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0d0d0d), color-stop(100%, #262626));
+  background: -webkit-linear-gradient(top, #0d0d0d 0%, #262626 100%);
+  background: -o-linear-gradient(top, #0d0d0d 0%, #262626 100%);
+  background: -ms-linear-gradient(top, #0d0d0d 0%, #262626 100%);
+  background: linear-gradient(to bottom, #0d0d0d 0%, #262626 100%);
+}
+.btn-red {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #ff0000;
+  background: -moz-linear-gradient(top, #ff6666 0%, #ff0000 50%, #e60000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff6666), color-stop(50%, #ff0000), color-stop(100%, #e60000));
+  background: -webkit-linear-gradient(top, #ff6666 0%, #ff0000 50%, #e60000 100%);
+  background: -o-linear-gradient(top, #ff6666 0%, #ff0000 50%, #e60000 100%);
+  background: -ms-linear-gradient(top, #ff6666 0%, #ff0000 50%, #e60000 100%);
+  background: linear-gradient(to bottom, #ff6666 0%, #ff0000 50%, #e60000 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-red:active,
+.btn-red.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.2);
+  background: #b30000;
+  background: -moz-linear-gradient(top, #b30000 0%, #e60000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b30000), color-stop(100%, #e60000));
+  background: -webkit-linear-gradient(top, #b30000 0%, #e60000 100%);
+  background: -o-linear-gradient(top, #b30000 0%, #e60000 100%);
+  background: -ms-linear-gradient(top, #b30000 0%, #e60000 100%);
+  background: linear-gradient(to bottom, #b30000 0%, #e60000 100%);
+}
+.btn-orange {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #000000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #ff7e00;
+  background: -moz-linear-gradient(top, #ffb266 0%, #ff7e00 50%, #e67100 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffb266), color-stop(50%, #ff7e00), color-stop(100%, #e67100));
+  background: -webkit-linear-gradient(top, #ffb266 0%, #ff7e00 50%, #e67100 100%);
+  background: -o-linear-gradient(top, #ffb266 0%, #ff7e00 50%, #e67100 100%);
+  background: -ms-linear-gradient(top, #ffb266 0%, #ff7e00 50%, #e67100 100%);
+  background: linear-gradient(to bottom, #ffb266 0%, #ff7e00 50%, #e67100 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-orange:active,
+.btn-orange.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.1);
+  background: #b35800;
+  background: -moz-linear-gradient(top, #b35800 0%, #e67100 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b35800), color-stop(100%, #e67100));
+  background: -webkit-linear-gradient(top, #b35800 0%, #e67100 100%);
+  background: -o-linear-gradient(top, #b35800 0%, #e67100 100%);
+  background: -ms-linear-gradient(top, #b35800 0%, #e67100 100%);
+  background: linear-gradient(to bottom, #b35800 0%, #e67100 100%);
+}
+.btn-yellow {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #000000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #ffde00;
+  background: -moz-linear-gradient(top, #ffeb66 0%, #ffde00 50%, #e6c800 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffeb66), color-stop(50%, #ffde00), color-stop(100%, #e6c800));
+  background: -webkit-linear-gradient(top, #ffeb66 0%, #ffde00 50%, #e6c800 100%);
+  background: -o-linear-gradient(top, #ffeb66 0%, #ffde00 50%, #e6c800 100%);
+  background: -ms-linear-gradient(top, #ffeb66 0%, #ffde00 50%, #e6c800 100%);
+  background: linear-gradient(to bottom, #ffeb66 0%, #ffde00 50%, #e6c800 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-yellow:active,
+.btn-yellow.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.1);
+  background: #b39b00;
+  background: -moz-linear-gradient(top, #b39b00 0%, #e6c800 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b39b00), color-stop(100%, #e6c800));
+  background: -webkit-linear-gradient(top, #b39b00 0%, #e6c800 100%);
+  background: -o-linear-gradient(top, #b39b00 0%, #e6c800 100%);
+  background: -ms-linear-gradient(top, #b39b00 0%, #e6c800 100%);
+  background: linear-gradient(to bottom, #b39b00 0%, #e6c800 100%);
+}
+.btn-blue {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #0000ff;
+  background: -moz-linear-gradient(top, #6666ff 0%, #0000ff 50%, #0000e6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6666ff), color-stop(50%, #0000ff), color-stop(100%, #0000e6));
+  background: -webkit-linear-gradient(top, #6666ff 0%, #0000ff 50%, #0000e6 100%);
+  background: -o-linear-gradient(top, #6666ff 0%, #0000ff 50%, #0000e6 100%);
+  background: -ms-linear-gradient(top, #6666ff 0%, #0000ff 50%, #0000e6 100%);
+  background: linear-gradient(to bottom, #6666ff 0%, #0000ff 50%, #0000e6 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-blue:active,
+.btn-blue.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.2);
+  background: #0000b3;
+  background: -moz-linear-gradient(top, #0000b3 0%, #0000e6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0000b3), color-stop(100%, #0000e6));
+  background: -webkit-linear-gradient(top, #0000b3 0%, #0000e6 100%);
+  background: -o-linear-gradient(top, #0000b3 0%, #0000e6 100%);
+  background: -ms-linear-gradient(top, #0000b3 0%, #0000e6 100%);
+  background: linear-gradient(to bottom, #0000b3 0%, #0000e6 100%);
+}
+.btn-green {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #1fa01e;
+  background: -moz-linear-gradient(top, #49dd47 0%, #1fa01e 50%, #1b8b1a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #49dd47), color-stop(50%, #1fa01e), color-stop(100%, #1b8b1a));
+  background: -webkit-linear-gradient(top, #49dd47 0%, #1fa01e 50%, #1b8b1a 100%);
+  background: -o-linear-gradient(top, #49dd47 0%, #1fa01e 50%, #1b8b1a 100%);
+  background: -ms-linear-gradient(top, #49dd47 0%, #1fa01e 50%, #1b8b1a 100%);
+  background: linear-gradient(to bottom, #49dd47 0%, #1fa01e 50%, #1b8b1a 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-green:active,
+.btn-green.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.2);
+  background: #136012;
+  background: -moz-linear-gradient(top, #136012 0%, #1b8b1a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #136012), color-stop(100%, #1b8b1a));
+  background: -webkit-linear-gradient(top, #136012 0%, #1b8b1a 100%);
+  background: -o-linear-gradient(top, #136012 0%, #1b8b1a 100%);
+  background: -ms-linear-gradient(top, #136012 0%, #1b8b1a 100%);
+  background: linear-gradient(to bottom, #136012 0%, #1b8b1a 100%);
+}
+.btn-lime {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #000000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #6ada10;
+  background: -moz-linear-gradient(top, #a0f35d 0%, #6ada10 50%, #5ec20e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a0f35d), color-stop(50%, #6ada10), color-stop(100%, #5ec20e));
+  background: -webkit-linear-gradient(top, #a0f35d 0%, #6ada10 50%, #5ec20e 100%);
+  background: -o-linear-gradient(top, #a0f35d 0%, #6ada10 50%, #5ec20e 100%);
+  background: -ms-linear-gradient(top, #a0f35d 0%, #6ada10 50%, #5ec20e 100%);
+  background: linear-gradient(to bottom, #a0f35d 0%, #6ada10 50%, #5ec20e 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-lime:active,
+.btn-lime.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.1);
+  background: #47930b;
+  background: -moz-linear-gradient(top, #47930b 0%, #5ec20e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #47930b), color-stop(100%, #5ec20e));
+  background: -webkit-linear-gradient(top, #47930b 0%, #5ec20e 100%);
+  background: -o-linear-gradient(top, #47930b 0%, #5ec20e 100%);
+  background: -ms-linear-gradient(top, #47930b 0%, #5ec20e 100%);
+  background: linear-gradient(to bottom, #47930b 0%, #5ec20e 100%);
+}
+.btn-pink {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #ff00a8;
+  background: -moz-linear-gradient(top, #ff66cb 0%, #ff00a8 50%, #e60097 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff66cb), color-stop(50%, #ff00a8), color-stop(100%, #e60097));
+  background: -webkit-linear-gradient(top, #ff66cb 0%, #ff00a8 50%, #e60097 100%);
+  background: -o-linear-gradient(top, #ff66cb 0%, #ff00a8 50%, #e60097 100%);
+  background: -ms-linear-gradient(top, #ff66cb 0%, #ff00a8 50%, #e60097 100%);
+  background: linear-gradient(to bottom, #ff66cb 0%, #ff00a8 50%, #e60097 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-pink:active,
+.btn-pink.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.2);
+  background: #b30076;
+  background: -moz-linear-gradient(top, #b30076 0%, #e60097 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b30076), color-stop(100%, #e60097));
+  background: -webkit-linear-gradient(top, #b30076 0%, #e60097 100%);
+  background: -o-linear-gradient(top, #b30076 0%, #e60097 100%);
+  background: -ms-linear-gradient(top, #b30076 0%, #e60097 100%);
+  background: linear-gradient(to bottom, #b30076 0%, #e60097 100%);
+}
+.btn-violet {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #7e00ff;
+  background: -moz-linear-gradient(top, #b266ff 0%, #7e00ff 50%, #7100e6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b266ff), color-stop(50%, #7e00ff), color-stop(100%, #7100e6));
+  background: -webkit-linear-gradient(top, #b266ff 0%, #7e00ff 50%, #7100e6 100%);
+  background: -o-linear-gradient(top, #b266ff 0%, #7e00ff 50%, #7100e6 100%);
+  background: -ms-linear-gradient(top, #b266ff 0%, #7e00ff 50%, #7100e6 100%);
+  background: linear-gradient(to bottom, #b266ff 0%, #7e00ff 50%, #7100e6 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+.btn-violet:active,
+.btn-violet.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.2);
+  background: #5800b3;
+  background: -moz-linear-gradient(top, #5800b3 0%, #7100e6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5800b3), color-stop(100%, #7100e6));
+  background: -webkit-linear-gradient(top, #5800b3 0%, #7100e6 100%);
+  background: -o-linear-gradient(top, #5800b3 0%, #7100e6 100%);
+  background: -ms-linear-gradient(top, #5800b3 0%, #7100e6 100%);
+  background: linear-gradient(to bottom, #5800b3 0%, #7100e6 100%);
+}
+/*button mixin*/
+.btn-group {
+  font-size: 0.9em;
+  margin: 0 0 1em 0;
+  text-align: center;
+}
+.btn-group .inside {
+  display: table;
+  margin: 0 auto;
+}
+.btn-group .btn {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+
+  -o-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  /*min-width: 40px;*/
+
+  width: 100%;
+  text-decoration: none;
+  letter-spacing: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.65em;
+  color: #000000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #eeeeee;
+  background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 50%, #e1e1e1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #eeeeee), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 50%, #e1e1e1 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #eeeeee 50%, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #eeeeee 50%, #e1e1e1 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #eeeeee 50%, #e1e1e1 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.6), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+  float: left;
+  margin: 0 !important;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  width: auto !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.btn-group .btn:active,
+.btn-group .btn.active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5), 0px 3px 3px rgba(0, 0, 0, 0.1);
+  background: #c8c8c8;
+  background: -moz-linear-gradient(top, #c8c8c8 0%, #e1e1e1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c8c8c8), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, #c8c8c8 0%, #e1e1e1 100%);
+  background: -o-linear-gradient(top, #c8c8c8 0%, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, #c8c8c8 0%, #e1e1e1 100%);
+  background: linear-gradient(to bottom, #c8c8c8 0%, #e1e1e1 100%);
+}
+.btn-group .btn:not(:last-child) {
+  border-right: 0;
+}
+.btn-group .btn:first-child {
+  border-radius: 2em 0 0 2em;
+}
+.btn-group .btn:last-child {
+  border-radius: 0 2em 2em 0;
+}
+.btn-group .btn.active {
+  /*.white-style-active();*/
+
+}
+.btn-group .view-group {
+  margin-top: 0.5em;
+}
+.btn-group .view-group .view {
+  display: none;
+}
+/*включаем только для стандартного шаблона магазинов*/
+/*@import 'shop.less';*/
+/*------------------------------*/
+@charset "UTF-8";
+@font-face {
+  font-family: 'fontello';
+  src: url("../img/font/fontello.eot?828428915");
+  src: url("../img/font/fontello.eot?828428915#iefix") format('embedded-opentype'), url("../img/font/fontello.woff?828428915") format('woff'), url("../img/font/fontello.ttf?828428915") format('truetype'), url("../img/font/fontello.svg?828428915#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('@{font-path}fontello.svg?828428915#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"],
+[class*=" icon-"],
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  /* opacity .8 */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+
+  line-height: 1em;
+  /* Animation center compensation - magrins should be symmetric */
+
+  /* remove if not needed */
+
+  /* you can be more comfortable with increased icons size */
+
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+}
+.icon-vk:before {
+  content: '\4e';
+}
+/* 'N' */
+.icon-twitter:before {
+  content: '\54';
+}
+/* 'T' */
+.icon-star:before {
+  content: '\2605';
+}
+/* '★' */
+.icon-star-empty:before {
+  content: '\2606';
+}
+/* '☆' */
+.icon-th:before {
+  content: '\268f';
+}
+/* '⚏' */
+.icon-mail:before {
+  content: '\2709';
+}
+/* '✉' */
+.icon-pencil-neg:before {
+  content: '\270f';
+}
+/* '✏' */
+.icon-ok:before {
+  content: '\2713';
+}
+/* '✓' */
+.icon-cancel:before {
+  content: '\2715';
+}
+/* '✕' */
+.icon-cancel-circle:before {
+  content: '\2716';
+}
+/* '✖' */
+.icon-youtube:before {
+  content: '\e002';
+}
+/* '' */
+.icon-th-large:before {
+  content: '\e708';
+}
+/* '' */
+.icon-location:before {
+  content: '\e724';
+}
+/* '' */
+.icon-map:before {
+  content: '\e727';
+}
+/* '' */
+.icon-basket:before {
+  content: '\e73d';
+}
+/* '' */
+.icon-down:before {
+  content: '\e75c';
+}
+/* '' */
+.icon-right:before {
+  content: '\e75e';
+}
+/* '' */
+.icon-up-open:before {
+  content: '\e75f';
+}
+/* '' */
+.icon-basket-alt:before {
+  content: '\e7ae';
+}
+/* '' */
+.icon-spin3:before {
+  content: '\e832';
+}
+/* '' */
+.icon-pin:before {
+  content: '\f031';
+}
+/* '' */
+.icon-bookmark-empty:before {
+  content: '\f097';
+}
+/* '' */
+.icon-menu:before {
+  content: '\f0c9';
+}
+/* '' */
+.icon-facebook-1:before {
+  content: '\f300';
+}
+/* '' */
+.icon-facebook:before {
+  content: '\f301';
+}
+/* '' */
+.icon-twitter-1:before {
+  content: '\f302';
+}
+/* '' */
+.icon-twitter-bird:before {
+  content: '\f303';
+}
+/* '' */
+.icon-vkontakte-rect:before {
+  content: '\f30a';
+}
+/* '' */
+.icon-odnoklassniki:before {
+  content: '\f30c';
+}
+/* '' */
+.icon-odnoklassniki-rect:before {
+  content: '\f30d';
+}
+/* '' */
+.icon-instagram-filled:before {
+  content: '\f31f';
+}
+/* '' */
+.icon-instagram:before {
+  content: '\f32d';
+}
+/* '' */
+.icon-thumbs-up-1:before {
+  content: '\e800';
+}
+/* '' */
+.icon-thumbs-down-1:before {
+  content: '\e801';
+}
+/* '' */
+.icon-bag:before {
+  content: '�';
+}
+/* '\1f45c' */
+.icon-search:before {
+  content: '�';
+}
+/* '\1f50d' */
+.icon-bookmark:before {
+  content: '�';
+}
+/* '\1f516' */
+/*на этапе прототипа используем webfonts. Но когда запустим в продакшн, нужно будет всё перевести в PNG'шки, потому что на многих Андроидах webfonts НЕ работают */
+@media (min-width: 320px) {
+  .x10 {
+    width: 10%;
+  }
+  .x20 {
+    width: 20%;
+  }
+  .x25 {
+    width: 25%;
+  }
+  .x25:nth-child(5n) {
+    clear: both;
+  }
+  .x30 {
+    width: 30%;
+  }
+  .x33 {
+    width: 33.333%;
+  }
+  .x33:nth-child(4n) {
+    clear: both;
+  }
+  .x40 {
+    width: 40%;
+  }
+  .x50 {
+    width: 50%;
+  }
+  .x50:nth-child(3n) {
+    clear: both;
+  }
+  .x60 {
+    width: 60%;
+  }
+  .x70 {
+    width: 70%;
+  }
+  .x75 {
+    width: 75%;
+  }
+  .x80 {
+    width: 80%;
+  }
+  .x90 {
+    width: 90%;
+  }
+  /*12 column layout*/
+  .c1,
+  .c2,
+  .c3,
+  .c4,
+  .c5,
+  .c6,
+  .c7,
+  .c8,
+  .c9,
+  .c10,
+  .c11,
+  .c12 {
+    margin-right: 3.8%;
+    float: left;
+  }
+  .c1 {
+    width: 4.85%;
+  }
+  .c2 {
+    width: 13.45%;
+  }
+  .c3 {
+    width: 22.05%;
+  }
+  .c4 {
+    width: 30.75%;
+  }
+  .c5 {
+    width: 39.45%;
+  }
+  .c6 {
+    width: 48%;
+  }
+  .c7 {
+    width: 56.75%;
+  }
+  .c8 {
+    width: 65.4%;
+  }
+  .c9 {
+    width: 74.05%;
+  }
+  .c10 {
+    width: 82.7%;
+  }
+  .c11 {
+    width: 91.35%;
+  }
+  .last {
+    margin-right: 0 !important;
+  }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+    text-align: right;
+  }
+  /*icons*/
+  .icons {
+    clear: both;
+  }
+  .icons .icon {
+    display: block;
+    float: left;
+    margin: 0 0 0.5em 0;
+  }
+  .icons .icon a .img,
+  .icons .icon a .txt {
+    float: none;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    font-size: 0.9em;
+    word-break: break-word;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 120%;
+  }
+  .mobile-only {
+    display: none;
+  }
+  .tablet-only {
+    display: inherit;
+  }
+  .tablet-25 {
+    width: 25%;
+    clear: none !important;
+  }
+  .tablet-25:nth-child(5n) {
+    clear: both !important;
+  }
+  .navi-bottom ul li a {
+    width: 33%;
+    float: left;
+    margin: 0.5em 0;
+  }
+  .cs3-pagination {
+    margin-top: 0.8em;
+  }
+  /*SHOP STYLES*/
+  .item.grid,
+  .view .item {
+    width: 30% !important;
+    margin-right: 5% !important;
+  }
+  .item.grid:nth-child(2n-1),
+  .view .item:nth-child(2n-1) {
+    clear: none;
+    margin-right: 5% !important;
+  }
+  .item.grid:nth-child(4n-1),
+  .view .item:nth-child(4n-1) {
+    clear: none;
+    margin-right: 0 !important;
+  }
+  .item.grid:nth-child(4n),
+  .view .item:nth-child(4n) {
+    clear: both;
+  }
+  .breadcrumb a {
+    font-size: 120% !important;
+  }
+  /*SHOP STYLES*/
+}
