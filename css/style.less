@@ -7,6 +7,7 @@
 @pad2: @pad*1.6;
 @pad3: @pad*2.8;
 @pad-list: @pad*1.5;
+@bpad: @pad/5;
 
 /*h1*/
 @xxxl: 1.8rem;
@@ -34,17 +35,33 @@
 /*---------------------------
 ---------- colors  ----------
 ----------------------------*/
-@color-txt: #000;
+
+@color-txt: #111;
+@color-txt2: #5C5C5C;
 @color-back: #fff;
-@color-back2: darken(@color-link,10%);
-@color-hidden: #eee;
+@color-back2: #FFE9D1;
+@color-back3: #F6E7D6;
+@color-back4: rgba(0,0,0,.05);
 
-@color-link: #2c74eb;
-@color-link-hover: @color-link2;
-@color-link2: #de1e25;
+@color-accent: #E75200;
+@color-accent2: #DD640B;
 
+@color-btn: @color-accent;
+
+@color-link: #1D76A8;
+@color-link-hover: @color-accent2;
+
+@color-link2: @color-accent2; 
+
+
+@color-border: rgba(0,0,0,.15);
+@color-border-w: rgba(255,255,255,.3);
 @grey: #777;
 @grey2: #eee;
+
+@color-footer: @color-back2;
+@color-hidden: #eee;
+
 
 /*---------------------------
 ---------- imports ----------
@@ -52,11 +69,17 @@
 @import 'normalize.less';
 @import 'vars.less';
 @import 'style-base.less';
-@import 'extras.less';
+
+@import 'mixins.less'; // Кусочки UI-элементов
+@import 'mixins-attributes.less'; // Замена свойств с параметрами, избавление от вендорных префиксов 
+
+@import 'project.less'; // Стили для текущего проекта
 @import 'slider.less';
 @import 'buttons.less';
 /*включаем только для стандартного шаблона магазинов*/
 /*@import 'shop.less';*/
 /*------------------------------*/
 @import 'webfont.less';
+// @import 'icons/sprites.less'; // если шрифт не катит — юзаем мега-спрайт
+
 @import 'end.less';

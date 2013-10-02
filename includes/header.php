@@ -10,11 +10,12 @@
   <meta name="format-detection" content="telephone=yes" />
   
   <!--realtime less compiler-->
-  <!--<link rel="stylesheet/less" type="text/css" href="css/style.less"><script src="js/less-1.3.3.min.js" type="text/javascript"></script>-->
+ <link rel="stylesheet/less" type="text/css" href="css/style.less">
+ <script src="js/less-1.3.3.min.js" type="text/javascript"></script>
   
-  <!--это для скопмилированного css-->
+  <!--это для скопмилированного css
   <link rel="stylesheet" href="css/style.css">
-  
+  -->
   <!--apple web app-->
   <meta name="apple-mobile-web-app-title" content="eski.mobi">
   
@@ -25,9 +26,9 @@
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple/144.png" />
   
   <!--для live refresh-->
-  <!--использовать только при локальной разработке-->
+  <!--использовать только при локальной разработке
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
- 
+ -->
   </head>
 <body>
 

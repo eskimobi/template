@@ -57,6 +57,8 @@ jPM.on();
 <link rel="stylesheet" href="js/cs3/idangerous.chopslider-3.4.css"/>
 <script src="js/cs3/idangerous.chopslider-3.4.min.js"></script>
 <!--end slider-->
+<script src="js/bxslider/jquery.bxslider.min.js"></script>
+<link href="js/bxslider/jquery.bxslider.css" rel="stylesheet"/>
 <!--<script src="js/jquery.fittext.js"></script>-->
 
 <script type="text/javascript"> 

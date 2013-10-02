@@ -1,114 +1,479 @@
 @charset "UTF-8";
-@font-path: '../img/font/';
-
+@fontPath: 'fonts';
 @font-face {
-  font-family: 'fontello';
-  src: url("@{font-path}fontello.eot?828428915");
-  src: url("@{font-path}fontello.eot?828428915#iefix") format('embedded-opentype'), url("@{font-path}fontello.woff?828428915") format('woff'), url("@{font-path}fontello.ttf?828428915") format('truetype'), url("@{font-path}fontello.svg?828428915#fontello") format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'icomoon';
+	src:url('@{fontPath}/icomoon.eot');
+	src:url('@{fontPath}/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('@{fontPath}/icomoon.woff') format('woff'),
+		url('@{fontPath}/icomoon.ttf') format('truetype'),
+		url('@{fontPath}/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+@media screen and (max-device-width: 480px) {
   @font-face {
-    font-family: 'fontello';
-    src: url('@{font-path}fontello.svg?828428915#fontello') format('svg');
-  }
+    font-family: "icomoon";
+    src: url("@{fontPath}/icomoon.woff") format("woff"),
+    url("@{fontPath}/icomoon.ttf") format("truetype"),
+    url("@{fontPath}/icomoon.svg#icomoon") format("svg");
+}}
+
+.font-opacity {
+	opacity: 1;
 }
-*/
-[class^="icon-"],
-[class*=" icon-"], 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  text-align: center;
-/* opacity .8 */
-/* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-/* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-/* Animation center compensation - magrins should be symmetric */
-/* remove if not needed */
-/* you can be more comfortable with increased icons size */
-/* font-size: 120%; */
-/* Uncomment for 3D effect */
-/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon-icomoon {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
 }
 
 
-.icon-vk:before { content: '\4e'; } /* 'N' */
-.icon-twitter:before { content: '\54'; } /* 'T' */
-.icon-star:before { content: '\2605'; } /* '★' */
-.icon-star-empty:before { content: '\2606'; } /* '☆' */
-.icon-th:before { content: '\268f'; } /* '⚏' */
-.icon-mail:before { content: '\2709'; } /* '✉' */
-.icon-pencil-neg:before { content: '\270f'; } /* '✏' */
-.icon-ok:before { content: '\2713'; } /* '✓' */
-.icon-cancel:before { content: '\2715'; } /* '✕' */
-.icon-cancel-circle:before { content: '\2716'; } /* '✖' */
-.icon-youtube:before { content: '\e002'; } /* '' */
-.icon-th-large:before { content: '\e708'; } /* '' */
-.icon-location:before { content: '\e724'; } /* '' */
-.icon-map:before { content: '\e727'; } /* '' */
-.icon-basket:before { content: '\e73d'; } /* '' */
-.icon-down:before { content: '\e75c'; } /* '' */
-.icon-right:before { content: '\e75e'; } /* '' */
-.icon-up-open:before { content: '\e75f'; } /* '' */
-.icon-basket-alt:before { content: '\e7ae'; } /* '' */
-.icon-spin3:before { content: '\e832'; } /* '' */
-.icon-pin:before { content: '\f031'; } /* '' */
-.icon-bookmark-empty:before { content: '\f097'; } /* '' */
-.icon-menu:before { content: '\f0c9'; } /* '' */
-.icon-facebook-1:before { content: '\f300'; } /* '' */
-.icon-facebook:before { content: '\f301'; } /* '' */
-.icon-twitter-1:before { content: '\f302'; } /* '' */
-.icon-twitter-bird:before { content: '\f303'; } /* '' */
-.icon-vkontakte-rect:before { content: '\f30a'; } /* '' */
-.icon-odnoklassniki:before { content: '\f30c'; } /* '' */
-.icon-odnoklassniki-rect:before { content: '\f30d'; } /* '' */
-.icon-instagram-filled:before { content: '\f31f'; } /* '' */
-.icon-instagram:before { content: '\f32d'; } /* '' */
-.icon-thumbs-up-1:before { content: '\e800'; } /* '' */
-.icon-thumbs-down-1:before { content: '\e801'; } /* '' */
-.icon-bag:before { content: '👜'; } /* '\1f45c' */
-.icon-search:before { content: '🔍'; } /* '\1f50d' */
-.icon-bookmark:before { content: '🔖'; } /* '\1f516' */
-
-/*на этапе прототипа используем webfonts. Но когда запустим в продакшн, нужно будет всё перевести в PNG'шки, потому что на многих Андроидах webfonts НЕ работают */
-
-.icon-font(){
-  font-family: 'fontello';
-  -webkit-font-smoothing: antialiased;
+.icon-pencil {
+	.icon-icomoon; content: "\e003";
 }
-.icon-right(){
-  .icon-font();
-  content: '\e75e';
+.icon-pen {
+	.icon-icomoon; content: "\e004";
 }
-.icon-down(){
-  .icon-font();
-  content: '\e75c';
+.icon-camera {
+	.icon-icomoon; content: "\e005";
 }
-.icon-cart(){
-  .icon-font();
-  content: '\e800';
+.icon-music {
+	.icon-icomoon; content: "\e006";
 }
-.icon-star(){
-  .icon-font();
-  content: '\2605';
+.icon-headphones {
+	.icon-icomoon; content: "\e007";
 }
-.icon-star-empty(){
-  .icon-font();
-  content: '\2606';
+.icon-play {
+	.icon-icomoon; content: "\e008";
 }
-
-
-
+.icon-connection {
+	.icon-icomoon; content: "\e009";
+}
+.icon-file {
+	.icon-icomoon; content: "\e00a";
+}
+.icon-tag {
+	.icon-icomoon; content: "\e00b";
+}
+.icon-tags {
+	.icon-icomoon; content: "\e00c";
+}
+.icon-cart {
+	.icon-icomoon; content: "\e00d";
+}
+.icon-cart-2 {
+	.icon-icomoon; content: "\e00e";
+}
+.icon-cart-3 {
+	.icon-icomoon; content: "\e00f";
+}
+.icon-credit {
+	.icon-icomoon; content: "\e010";
+}
+.icon-coin {
+	.icon-icomoon; content: "\e011";
+}
+.icon-phone {
+	.icon-icomoon; content: "\e012";
+}
+.icon-phone-hang-up {
+	.icon-icomoon; content: "\e013";
+}
+.icon-location {
+	.icon-icomoon; content: "\e014";
+}
+.icon-location-2 {
+	.icon-icomoon; content: "\e015";
+}
+.icon-clock {
+	.icon-icomoon; content: "\e016";
+}
+.icon-history {
+	.icon-icomoon; content: "\e017";
+}
+.icon-clock-2 {
+	.icon-icomoon; content: "\e018";
+}
+.icon-undo {
+	.icon-icomoon; content: "\e019";
+}
+.icon-redo {
+	.icon-icomoon; content: "\e01a";
+}
+.icon-forward {
+	.icon-icomoon; content: "\e01b";
+}
+.icon-reply {
+	.icon-icomoon; content: "\e01c";
+}
+.icon-undo-2 {
+	.icon-icomoon; content: "\e01d";
+}
+.icon-redo-2 {
+	.icon-icomoon; content: "\e01e";
+}
+.icon-bubbles {
+	.icon-icomoon; content: "\e01f";
+}
+.icon-bubbles-2 {
+	.icon-icomoon; content: "\e020";
+}
+.icon-bubble {
+	.icon-icomoon; content: "\e021";
+}
+.icon-bubble-2 {
+	.icon-icomoon; content: "\e022";
+}
+.icon-user {
+	.icon-icomoon; content: "\e023";
+}
+.icon-user-2 {
+	.icon-icomoon; content: "\e024";
+}
+.icon-user-3 {
+	.icon-icomoon; content: "\e025";
+}
+.icon-spinner {
+	.icon-icomoon; content: "\e027";
+}
+.icon-spinner-2 {
+	.icon-icomoon; content: "\e028";
+}
+.icon-search {
+	.icon-icomoon; content: "\e029";
+}
+.icon-zoom-in {
+	.icon-icomoon; content: "\e02a";
+}
+.icon-zoom-out {
+	.icon-icomoon; content: "\e02b";
+}
+.icon-expand {
+	.icon-icomoon; content: "\e02c";
+}
+.icon-contract {
+	.icon-icomoon; content: "\e02d";
+}
+.icon-expand-2 {
+	.icon-icomoon; content: "\e02e";
+}
+.icon-contract-2 {
+	.icon-icomoon; content: "\e02f";
+}
+.icon-key {
+	.icon-icomoon; content: "\e030";
+}
+.icon-key-2 {
+	.icon-icomoon; content: "\e031";
+}
+.icon-lock {
+	.icon-icomoon; content: "\e032";
+}
+.icon-wrench {
+	.icon-icomoon; content: "\e033";
+}
+.icon-settings {
+	.icon-icomoon; content: "\e034";
+}
+.icon-cog {
+	.icon-icomoon; content: "\e035";
+}
+.icon-cogs {
+	.icon-icomoon; content: "\e036";
+}
+.icon-cog-2 {
+	.icon-icomoon; content: "\e037";
+}
+.icon-remove {
+	.icon-icomoon; content: "\e038";
+}
+.icon-remove-2 {
+	.icon-icomoon; content: "\e039";
+}
+.icon-menu {
+	.icon-icomoon; content: "\e03b";
+}
+.icon-eye {
+	.icon-icomoon; content: "\e03c";
+}
+.icon-star {
+	.icon-icomoon; content: "\e03d";
+}
+.icon-star-2 {
+	.icon-icomoon; content: "\e03e";
+}
+.icon-star-3 {
+	.icon-icomoon; content: "\e03f";
+}
+.icon-heart {
+	.icon-icomoon; content: "\e040";
+}
+.icon-heart-2 {
+	.icon-icomoon; content: "\e041";
+}
+.icon-heart-broken {
+	.icon-icomoon; content: "\e042";
+}
+.icon-thumbs-up {
+	.icon-icomoon; content: "\e043";
+}
+.icon-thumbs-up-2 {
+	.icon-icomoon; content: "\e044";
+}
+.icon-warning {
+	.icon-icomoon; content: "\e045";
+}
+.icon-notification {
+	.icon-icomoon; content: "\e046";
+}
+.icon-info {
+	.icon-icomoon; content: "\e047";
+}
+.icon-info-2 {
+	.icon-icomoon; content: "\e048";
+}
+.icon-blocked {
+	.icon-icomoon; content: "\e049";
+}
+.icon-cancel-circle, .icon-cancel {
+	.icon-icomoon; content: "\e04a";
+}
+.icon-spam {
+	.icon-icomoon; content: "\e04b";
+}
+.icon-checkmark-circle {
+	.icon-icomoon; content: "\e04c";
+}
+.icon-close {
+	.icon-icomoon; content: "\e04d";
+}
+.icon-checkmark {
+	.icon-icomoon; content: "\e04e";
+}
+.icon-checkmark-2 {
+	.icon-icomoon; content: "\e04f";
+}
+.icon-minus {
+	.icon-icomoon; content: "\e050";
+}
+.icon-plus {
+	.icon-icomoon; content: "\e051";
+}
+.icon-enter {
+	.icon-icomoon; content: "\e052";
+}
+.icon-exit {
+	.icon-icomoon; content: "\e053";
+}
+.icon-arrow-up-left {
+	.icon-icomoon; content: "\e054";
+}
+.icon-arrow-up {
+	.icon-icomoon; content: "\e055";
+}
+.icon-arrow-up-right {
+	.icon-icomoon; content: "\e056";
+}
+.icon-arrow-right {
+	.icon-icomoon; content: "\e057";
+}
+.icon-arrow-down-right {
+	.icon-icomoon; content: "\e058";
+}
+.icon-arrow-down {
+	.icon-icomoon; content: "\e059";
+}
+.icon-arrow-down-left {
+	.icon-icomoon; content: "\e05a";
+}
+.icon-arrow-left {
+	.icon-icomoon; content: "\e05b";
+}
+.icon-checkbox-checked {
+	.icon-icomoon; content: "\e05c";
+}
+.icon-checkbox-unchecked {
+	.icon-icomoon; content: "\e05d";
+}
+.icon-radio-checked {
+	.icon-icomoon; content: "\e05e";
+}
+.icon-radio-unchecked {
+	.icon-icomoon; content: "\e05f";
+}
+.icon-facebook {
+	.icon-icomoon; content: "\e060";
+}
+.icon-facebook-2 {
+	.icon-icomoon; content: "\e061";
+}
+.icon-twitter {
+	.icon-icomoon; content: "\e062";
+}
+.icon-twitter-2 {
+	.icon-icomoon; content: "\e063";
+}
+.icon-google-plus {
+	.icon-icomoon; content: "\e066";
+}
+.icon-google-plus-2 {
+	.icon-icomoon; content: "\e068";
+}
+.icon-grid {
+	.icon-icomoon; content: "\e064";
+}
+.icon-list {
+	.icon-icomoon; content: "\e065";
+}
+.icon-chevron-up {
+	.icon-icomoon; content: "\f077";
+}
+.icon-chevron-down {
+	.icon-icomoon; content: "\f078";
+}
+.icon-chevron-left {
+	.icon-icomoon; content: "\f053";
+}
+.icon-chevron-right {
+	.icon-icomoon; content: "\f054";
+}
+.icon-long-arrow-right {
+	.icon-icomoon; content: "\f178";
+}
+.icon-long-arrow-left {
+	.icon-icomoon; content: "\f177";
+}
+.icon-angle-right {
+	.icon-icomoon; content: "\f105";
+}
+.icon-angle-left {
+	.icon-icomoon; content: "\f104";
+}
+.icon-angle-up {
+	.icon-icomoon; content: "\f106";
+}
+.icon-angle-down {
+	.icon-icomoon; content: "\f107";
+}
+.icon-caret-right {
+	.icon-icomoon; content: "\f0da";
+}
+.icon-caret-left {
+	.icon-icomoon; content: "\f0d9";
+}
+.icon-caret-up {
+	.icon-icomoon; content: "\f0d8";
+}
+.icon-caret-down {
+	.icon-icomoon; content: "\f0d7";
+}
+.icon-reorder {
+	.icon-icomoon; content: "\f0c9";
+}
+.icon-plus-2 {
+	.icon-icomoon; content: "\f067";
+}
+.icon-minus-2 {
+	.icon-icomoon; content: "\f068";
+}
+.icon-arrow-left-2 {
+	.icon-icomoon; content: "\f060";
+}
+.icon-arrow-right-2 {
+	.icon-icomoon; content: "\f061";
+}
+.icon-arrow-up-2 {
+	.icon-icomoon; content: "\f062";
+}
+.icon-arrow-down-2 {
+	.icon-icomoon; content: "\f063";
+}
+.icon-ok {
+	.icon-icomoon; content: "\f00c";
+}
+.icon-remove-3 {
+	.icon-icomoon; content: "\f00d";
+}
+.icon-zoom-in-2 {
+	.icon-icomoon; content: "\f00e";
+}
+.icon-zoom-out-2 {
+	.icon-icomoon; content: "\f010";
+}
+.icon-th {
+	.icon-icomoon; content: "\f00a";
+}
+.icon-home {
+	.icon-icomoon; content: "\f015";
+}
+.icon-share-alt {
+	.icon-icomoon; content: "\f064";
+}
+.icon-map-marker {
+	.icon-icomoon; content: "\f041";
+}
+.icon-apple {
+	.icon-icomoon; content: "\f179";
+}
+.icon-windows {
+	.icon-icomoon; content: "\f17a";
+}
+.icon-android {
+	.icon-icomoon; content: "\f17b";
+}
+.icon-linux {
+	.icon-icomoon; content: "\f17c";
+}
+.icon-th-large {
+	.icon-icomoon; content: "\f009";
+}
+.icon-rss {
+	.icon-icomoon; content: "\e000";
+}
+.icon-e-mail {
+	.icon-icomoon; content: "\e001";
+}
+.icon-mailru {
+	.icon-icomoon; content: "\e002";
+}
+.icon-youtube {
+	.icon-icomoon; content: "\e03a";
+}
+.icon-odnoklassniki {
+	.icon-icomoon; content: "\e067";
+}
+.icon-vk2 {
+	.icon-icomoon; content: "\e069";
+}
+.icon-vk {
+	.icon-icomoon; content: "\e06a";
+}
+.icon-facebook-3 {
+	.icon-icomoon; content: "\e06b";
+}
+.icon-twitter-3 {
+	.icon-icomoon; content: "\e06c";
+}
+.icon-linkedin {
+	.icon-icomoon; content: "\e06d";
+}
+.icon-google-plus-3 {
+	.icon-icomoon; content: "\e06e";
+}

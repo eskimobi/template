@@ -22,7 +22,6 @@ body{
 img{
   display: block !important;
   max-width: 100% !important;
-  width: 100% !important;
   height: auto !important;
 }
 #eski-root{
@@ -46,88 +45,7 @@ img{
 /*---------------------------
 ---------- header  ----------
 ----------------------------*/
-.header{
-  .unselectable();
-  /*position: fixed;*/
-  width: 100%;
-}
-/*header-styles*/
-.header-bar{
-  @height: 46px;
-  
-  /*position: relative;*/
-  width: 100%;
-  z-index: 99;
-  margin: 0;
-  border: 0;
-              
-  background: @color-link;
-  box-shadow: inset 0px -1px 0px rgba(0,0,0,.2),
-              0px 2px 2px rgba(0,0,0,.1);
-  text-align: center;
-  
-  .inside{
-    padding: @pad*0.8 @pad;
-  }
-  
-  table{
-    width: 100%;
-    
-    tr td{
-      padding: 0;
-      width: auto !important;
-    }
-  }
-  .logo{
-    display: block;
-    height: 40px;
-    
-    img{
-      width: auto !important;
-      height: 100% !important;
-    }
-  }
-  .btn{
-    .rad(0);
-    margin: 0;
-    padding: @pad;
-    min-width: 54px;
-    text-decoration: none;
-    
-    span{
-      margin: 0 auto;
-    }
-  }
-  .active{
-    color: #fff !important;
-    text-shadow: 0 0 @pad rgba(255,255,255,.9) !important;
-  }
-  .inside{
-    padding: 0;
-  }
-  .logo{
-    padding: @pad;
-    border: 0;
-    box-shadow: none;
-    display: inline-block;
-  }
-  .btn{
-    display: block;
-    padding: @pad;
-    width: @height*1.2;
-    height: @height;
-    border-left: 1px solid rgba(255, 255, 255, .2);
-    box-shadow: -1px 0 0 rgba(0,0,0,.2);
-    
-    color: @color-back;
-    text-align: center;
-    
-    span{      
-      display: block;
-      margin-top: @height/7;
-    }
-  }
-}
+
 .cart{
   width: auto !important;
   
@@ -136,61 +54,8 @@ img{
     float: left;
   }
 }
-.cart-count{
-  @size: 13px;
-  display: inline-block;
-  box-sizing: content-box;
-  margin-left: 3px !important;
-  padding: @size/4 @size/4.2 0 @size/4.2; 
-  min-width: @size*0.8;
-  height: @size;
-  border-radius: @size; 
-  background: @color;
-  color: white;
-  text-align: center;
-  font-size: @size*0.8;
-  line-height: @size*0.8;
-}
-.style-0{
-  .btn{
-    width: auto;
-  }
-}
-.style-1{
-  @color: #e97071;
-  
-  background: @color;
-  box-shadow: inset 0px -1px 0px rgba(0,0,0,.2),
-              0px 3px 0px rgba(0,0,0,.08);
 
-  .active{
-    background: darken(@color,20%);
-  }
-  .cart-count{
-    background: @color2;
-    color: @color;
-  }
-}
-.style-2{
-  @color: darken(#3fd7cb,0%);
-  @color2: darken(@color,15%);
-  .gradi2(@color,@color2);
-  box-shadow: inset 0px -1px 3px @color,
-              inset 0px -1px 0px rgba(0,0,0,.9),
-              0px 1px 4px rgba(0,0,0,.2);
-  
-  .btn{
-    border: 0;
-    box-shadow: none;
-    color: darken(@color,20%);
-    text-shadow: 0 1px 0 @color;
-  }
-  .logo img{
-    margin: 0 auto;
-  }
-}
-.style-4{ }
-.style-5{ }
+
 
 a.tel{
   display: block;
@@ -232,7 +97,7 @@ ul.group{
     .ellipsis();
   }
   a:after{
-    .icon-right();
+    .icon-chevron-right;
     position: absolute;
     right: 0;
     top: @pad-list;
@@ -306,10 +171,10 @@ a{
 .bold{font-weight: bold;}
 h1,h2,h3,h4,h5,h6{margin: 0;}
 h1 a,h2 a,h3 a{padding:0;}
-.h1(){.bold();font-size: @xxxl !important;}
-.h2(){.bold();font-size: @xxl !important;}
-.h3(){.bold();font-size: @xl !important;}
-.h4(){.bold();font-size: @l !important;}
+.h1(){.bold();font-size: @xxxl;}
+.h2(){.bold();font-size: @xxl;}
+.h3(){.bold();font-size: @xl;}
+.h4(){.bold();font-size: @l;}
 h1{.h1();}
 h2{.h2();}
 h3{.h3();}
@@ -318,23 +183,15 @@ h4,h5,h6{.h4();margin: 0 !important;
 p{
   margin: 0;
   margin-bottom: @pad;
-  width: auto !important;  
-  font-size: @normal !important;
-  line-height: 120% !important;
-  height: auto !important;
+  width: auto;  
+  font-size: @normal;
+  line-height: 120%;
+  height: auto;
   a{
-    padding: 0 !important;
+    padding: 0;
   }
 }
-ul,ol{
-  margin: @pad/2 0 0 0;
-  padding-left: @pad2*2;
-  
-  li{
-    line-height: @xl;
-  }
-  a{padding: 0;}
-}
+
 table,
 form,
 input,
@@ -342,11 +199,11 @@ select,
 textarea,
 iframe,
 object{
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  height: auto !important;
-  font-size: @normal !important;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  font-size: @normal;
 }
 label{
 	display: block;
@@ -358,8 +215,8 @@ label{
 input,
 select,
 textarea{
-  padding: @pad/2 !important;
-  font-size: @l !important;
+  padding: @pad/2;
+  font-size: @l;
 }
 .light{
   font-weight: normal;
