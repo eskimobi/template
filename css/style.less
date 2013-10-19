@@ -39,25 +39,24 @@
 @color-txt: #111;
 @color-txt2: #5C5C5C;
 @color-back: #fff;
-@color-back2: #FFE9D1;
+@color-back2: @grey2;
 @color-back3: #F6E7D6;
 @color-back4: rgba(0,0,0,.05);
 
-@color-accent: #E75200;
-@color-accent2: #DD640B;
+@color-accent: red;
+@color-accent2: blue;
 
 @color-btn: @color-accent;
 
-@color-link: #1D76A8;
+@color-link: red;
 @color-link-hover: @color-accent2;
 
 @color-link2: @color-accent2; 
 
-
 @color-border: rgba(0,0,0,.15);
 @color-border-w: rgba(255,255,255,.3);
 @grey: #777;
-@grey2: #eee;
+@grey2: #ccc;
 
 @color-footer: @color-back2;
 @color-hidden: #eee;
@@ -70,16 +69,14 @@
 @import 'vars.less';
 @import 'style-base.less';
 
-@import 'mixins.less'; // Кусочки UI-элементов
-@import 'mixins-attributes.less'; // Замена свойств с параметрами, избавление от вендорных префиксов 
-
-@import 'project.less'; // Стили для текущего проекта
+@import 'project.less'; /* Стили для текущего проекта */
 @import 'slider.less';
 @import 'buttons.less';
 /*включаем только для стандартного шаблона магазинов*/
 /*@import 'shop.less';*/
 /*------------------------------*/
 @import 'webfont.less';
-// @import 'icons/sprites.less'; // если шрифт не катит — юзаем мега-спрайт
+/* если шрифт не катит — юзаем мега-спрайт */
+/* @import 'icons/sprites.less'; */
 
 @import 'end.less';

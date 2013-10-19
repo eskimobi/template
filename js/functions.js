@@ -4,49 +4,24 @@
 // ----------------------------
 // Показать верхнее меню
 // ----------------------------
-$('.btn.menu').bind('click',function() {
+$('.header .menu').bind('click',function() {
   $(this).attr("href", "javascript:void(0)");
-  if($(".topmost-menu").css('display')=='none'){
+  if($(".top-menu").css('display')=='none'){
     $(this).addClass('active');
-    $('.topmost-menu').slideDown();
+    $('.top-menu').slideDown();
   }else{
     $(this).removeClass('active');
-    $('.topmost-menu').slideUp();
+    $('.top-menu').slideUp();
   };
 });
-
-$('.article-big-photo-list ul').addClass('cs3');
-$('.article-big-photo-list ul li').addClass('cs3-slide');
-$('.article-big-photo-list').after('<div class="cs3-pagination"></div>');
 
 // ----------------------------
 // Слайдер
 // ----------------------------
-// Эффекты смотрим здесь — http://www.idangero.us/cs/
-jQuery(function(){ ! $(".cs3").cs3({
-  effects : 'slide',
-  
-  pagination : {
-    container : '.cs3-pagination',
-    hideOnStart : false,
-    showOnlyOnHover : false
-  },
-  
-  autoplay : {
-    enabled : true,
-    delay : 4000,
-    disableOnInteraction : true
-  },
-  
-  responsive:true,
-  responsiveSetSize : true,
-  
-  preloader : true,
-  
-  touch:{
-    enabled : true
-  }
-})})
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+
 
 // ----------------------------
 // Переключение видов

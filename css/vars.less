@@ -1,4 +1,4 @@
-.rad(@radius){
+.radius(@radius){
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
 	border-radius: @radius;
@@ -32,7 +32,7 @@
      -moz-box-shadow: @shadow;
           box-shadow: @shadow;
 }
-.gradi2(@c1,@c2){
+.gradient(@c1,@c2){
   background: @c1;
   background: -moz-linear-gradient(top,  @c1 0%, @c2 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@c1), color-stop(100%,@c2));
@@ -108,7 +108,7 @@
 
 .button-style(){
 	.unselectable();
-	.rad(@pad);
+	.radius(@pad);
 	display: inline-block;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -130,6 +130,313 @@
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+.btn-flat(@color: @color-btn) {
+	margin: @pad2 0;
+	padding: @pad2/2 @pad2;
+	.shadow(0 @pad/2 0 darken(@color,15%));
+	.radius(@bpad*3);
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: @color-back;
+	border: @bpad solid darken(@color,15%);
+	.gradient(lighten(@color,3%), darken(@color,3%));
+
+	&:hover {
+		.gradient(darken(@color,5%), darken(@color,5%));
+	}
+	&:active {
+		.shadow(0 @pad/8 0 darken(@color,15%));
+		top: @bpad*2;
+		position: relative;
+	}
+}
+
+.btn-skmrph(@color: @color-btn) {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: @color-back;
+	border: @bpad solid darken(@color,10%);
+	box-shadow: 0 @bpad*2 @bpad*2 @color-border, inset 0 0 0 @bpad @color-border-w;
+	.radius(@pad);
+	.gradient(lighten(@color,10%), darken(@color,10%));
+	padding: @pad @pad2;
+	.bold;
+	&:hover {
+		.gradient(lighten(@color,15%), darken(@color,15%));
+	}
+	&:active, &.active {
+		.gradient(darken(@color,15%), lighten(@color,15%));
+		.shadow(inset 0 0 @bpad*2 darken(@color,25%));
+		border-color: darken(@color,27%);
+	}
+}
+
+.btn-simple(@color: @color-btn) {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: @color-back;
+	border: @bpad solid darken(@color,7%);
+	padding: @pad/2 @pad;
+	color: lighten(@color,40%);
+	.gradient(lighten(@color,3%), darken(@color,3%));
+
+	&:hover {
+		.gradient(darken(@color,3%), darken(@color,8%));
+		color: lighten(@color,50%);
+	}
+	&:active {
+		.gradient(darken(@color,15%), darken(@color,15%));
+		color: lighten(@color,10%);
+		border: @bpad solid darken(@color,25%);
+	}
+}
+
+.btn-bar-skmrph(@color: @color-btn) {
+	.gradient_tripple(@color);
+	border-top: @bpad solid @color-border;
+	border-bottom: @bpad solid @color-border;
+	li {
+		a {
+			display: block;
+			text-decoration: none;
+			padding: @pad/2 @pad2/4;
+			font-size: @small;
+			color: darken(@color,60%);
+			.bold;
+			&:hover, &:active, &.active {
+				color: @color-txt;
+				.text {
+					border-bottom: @bpad solid;
+				}
+			}
+		}
+	}
+}
+
+.btn-bar-flat(@color: @color-back) {
+	.inliner;
+	border-bottom: @bpad solid darken(@color,15%);
+	li {
+		margin: @pad2/2 @pad2/4 0;
+		border: @bpad solid darken(@color,15%);
+		.radius(@pad2/2 @pad2/2 0 0);
+		background-color: darken(@color,5%);
+		&.active {
+			background-color: @color;
+			border-color: darken(@color,15%);
+			border-bottom-color: @color;
+			box-shadow: inset 0 -@bpad 0 @color;
+		}
+	}
+}
+
+.lborder(@color: @color-border) {border-left: @bpad solid @color;}
+.rborder(@color: @color-border) {border-right: @bpad solid @color;}
+.tborder(@color: @color-border) {border-top: @bpad solid @color;}
+.bborder(@color: @color-border) {border-bottom: @bpad solid @color;}
+.border(@color: @color-border) {border: @bpad solid @color;}
+.no-lborder{border-left: none;}
+.no-rborder{border-right: none;}
+.no-tborder{border-top: none;}
+.no-bborder{border-bottom: none;}
+.no-border{border: none;}
+
+.dotted(@color: lighten(@color-link,15%)) {
+	border-bottom: @bpad dotted @color;
+}
+.dashed(@color: lighten(@color-link,15%)) {
+	border-bottom: @bpad dashed @color;
+}
+
+.tag { // Надо обновить
+	display: inline-block;
+	padding: @pad/2 @pad2;
+	margin: @pad2/2 @pad2/4;
+	text-decoration: none;
+	background: @color-back3;
+	font-size: @tiny;
+	.radius(@bpad*2);
+	&.active, &:hover, &:active {
+		color: @color-link;
+		background-color: @color-back2;
+	}
+}
+
+
+.x-size-50 {
+	width: 100%;
+	@media (min-width:@max-width) {
+		width: 49%;
+	    vertical-align: top;
+	    display: inline-block;
+	}
+}
+.x-size-25 {
+	width: 50%;
+	@media (min-width:@max-width) {
+		width: 25%;
+	}
+}
+.x-size-25-2n-1(@size: @pad2) {
+	width: 50%;
+	&:nth-child(2n+1) {	padding: @size;	padding-left: @size/2;}
+	&:nth-child(2n) {	padding: @size;	padding-right:@size/2;	}
+	@media (min-width:@max-width) {
+		width: 25%;
+	}
+}
+.x-size-25-2n(@size: @pad2) { 
+	width: 50%;
+	&:nth-child(2n) {	padding: @size;	padding-left: @size/2;}
+	&:nth-child(2n+1) {	padding: @size;	padding-right:@size/2;	}
+	@media (min-width:@max-width) {
+		width: 25%;
+	}
+}
+.x-size-50-2n-1(@size: @pad2) {
+	width:100%;
+	@media (min-width:@max-width) {
+		&:nth-child(2n+1) {	padding: @size;	padding-left: @size/2;}
+		&:nth-child(2n) {	padding: @size;	padding-right:@size/2;	}
+		width: 50%;
+	}
+}
+.x-size-50-2n(@size: @pad2) {
+	width:100%;
+	@media (min-width:@max-width) {
+		width: 50%;
+		&:nth-child(2n) {	padding: @size;	padding-left: @size/2;}
+		&:nth-child(2n+1) {	padding: @size;	padding-right:@size/2;	}
+	}
+}
+
+
+@font-face {
+  font-family: 'ALSRubl-Tahoma';
+  src: url('rouble-sign/alsrubl-tahoma-regular.eot');
+  src: url('rouble-sign/alsrubl-tahoma-regular.eot?#iefix') format('embedded-opentype'),url('rouble-sign/alsrubl-tahoma-regular.woff') format('woff'), url('rouble-sign/alsrubl-tahoma-regular.ttf') format('truetype'), url('rouble-sign/alsrubl-tahoma-regular.svg#ALSRublTahomaItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ALSRubl-Tahoma';
+  src: url('rouble-sign/alsrubl-tahoma-bold.eot');
+  src: url('rouble-sign/alsrubl-tahoma-bold.eot?#iefix') format('embedded-opentype'), url('rouble-sign/alsrubl-tahoma-bold.woff') format('woff'), url('rouble-sign/alsrubl-tahoma-bold.ttf') format('truetype'), url('rouble-sign/alsrubl-tahoma-bold.svg#ALSRublTahomaItalic') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*
+  ХТМЛ: 100 <span class="b-rub">Р</span>
+  Если вам нужен рубль в нескольких шрифтах, используйте .b-rub_tahoma, вместо .b-rub
+*/
+.b-rub, .b-rub_tahoma {
+  font-family: 'ALSRubl-Tahoma', Tahoma, sans-serif;
+  line-height: normal;
+}
+.rouble {
+		&:after {
+		content: '\420';
+		.b-rub;
+	}
+}
+
+
+.pop-up(@pos: fixed) {
+	//display: none;
+	position: @pos;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	background: @color-border;
+	z-index: 99;
+	padding: @pad2;
+	> * {
+		position: relative;
+		max-width: @max-width;
+		box-shadow: 0 0 @bpad*2 @color-txt;
+		padding: @pad2;
+		.radius(@pad2);
+		margin: 0 auto;
+		background: @color-back;
+		.close {
+			position: absolute;
+			right: @pad2;
+			top: @pad;
+			&:after {
+				.icon-cancel;
+				font-size: @small;
+			}
+		}
+	}
+}
+
+
+
+.inliner { // в процессе изменения
+  word-spacing: -.36rem; // Verdana
+   // display: table; //Лекарство для webkit
+  > * {
+    display: inline-block;
+    vertical-align: top;
+    word-spacing: normal; // возвращаем нормальное состояние
+  }
+}
+.justifier {
+  text-align: justify;
+-webkit-text-align-last: justify;
+   -moz-text-align-last: justify;
+  -ms-text-align-last: justify;
+   -o-text-align-last: justify;
+    text-align-last: justify;
+  line-height: 0;
+  > * {
+    display: inline-block;
+    vertical-align: top;
+    line-height: normal;
+    text-align: left;
+    padding-top: @pad2/2; // fix bottom magic padding
+  }
+  &:after {
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    content: '';
+    display: inline-block;
+  }
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+ -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.tableToBlocks {
+  display: block;
+  width: 100%;
+  > tbody, > thead {
+    display: block;
+    width: 100%;
+    > tr, > th {
+      display: block;
+      width: 100%;
+      > td {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
 }
 
 
