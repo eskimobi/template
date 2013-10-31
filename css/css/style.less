@@ -1,0 +1,84 @@
+/*---------------------------
+---------- basics  ----------
+----------------------------*/
+@max-width: 768px;
+
+@pad: 0.5rem;
+@pad2: @pad*1.6;
+@pad3: @pad*2.8;
+@pad-list: @pad*1.5;
+@bpad: @pad/5;
+
+/*h1*/
+@xxxl: 1.8rem;
+/*h2*/
+@xxl: 1.6rem;
+/*h3*/
+@xl: 1.4rem;
+/*h4*/
+@l: 1.2rem;
+/*p*/
+@normal: 1rem;
+/*small*/
+@small: 0.9rem;
+/*tiny*/
+@tiny: 0.75rem;
+
+.xxxlarge(){font-size: @xxxl;}
+.xxlarge(){font-size: @xxl;}
+.xlarge(){font-size: @xl;}
+.large(){font-size: @l;}
+.normal(){font-size: @normal;}
+.small(){font-size: @small;}
+.tiny(){font-size: @tiny;}
+
+/*---------------------------
+---------- colors  ----------
+----------------------------*/
+
+@color-txt: #111;
+@color-txt2: #5C5C5C;
+@color-back: #fff;
+@color-back2: #FFE9D1;
+@color-back3: #F6E7D6;
+@color-back4: rgba(0,0,0,.05);
+
+@color-accent: #E75200;
+@color-accent2: #DD640B;
+
+@color-btn: @color-accent;
+
+@color-link: #1D76A8;
+@color-link-hover: @color-accent2;
+
+@color-link2: @color-accent2; 
+
+
+@color-border: rgba(0,0,0,.15);
+@color-border-w: rgba(255,255,255,.3);
+@grey: #777;
+@grey2: #eee;
+
+@color-footer: @color-back2;
+@color-hidden: #eee;
+
+
+/*---------------------------
+---------- imports ----------
+----------------------------*/
+@import 'normalize.less';
+@import 'style-base.less'; // Типографика, стандартные конструкции. Здесь классы применяются сразу
+
+@import 'mixins.less'; // Кусочки UI-элементов
+@import 'mixins-buttons.less'; // Кнопки, панели из кнопок
+@import 'mixins-attributes.less'; // Замена свойств с параметрами, избавление от вендорных префиксов 
+
+@import 'project.less'; // Стили для текущего проекта
+@import 'bx-slider.less'; // Стилия для слайдера
+/*включаем только для стандартного шаблона магазинов*/
+/*@import 'shop.less';*/
+/*------------------------------*/
+@import 'webfont.less';
+// @import 'icons/sprites.less'; // если шрифт не катит — юзаем мега-спрайт
+
+@import 'end.less';

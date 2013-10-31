@@ -1,0 +1,350 @@
+
+.lborder(@color: @color-border) {border-left: @bpad solid @color;}
+.rborder(@color: @color-border) {border-right: @bpad solid @color;}
+.tborder(@color: @color-border) {border-top: @bpad solid @color;}
+.bborder(@color: @color-border) {border-bottom: @bpad solid @color;}
+.border(@color: @color-border) {border: @bpad solid @color;}
+.no-lborder(){border-left: none;}
+.no-rborder(){border-right: none;}
+.no-tborder(){border-top: none;}
+.no-bborder(){border-bottom: none;}
+.no-border(){border: none;}
+
+.dotted(@color: lighten(@color-link,15%)) {
+	border-bottom: @bpad dotted @color;
+}
+.dashed(@color: lighten(@color-link,15%)) {
+	border-bottom: @bpad dashed @color;
+}
+
+.nolist(){
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+
+
+.x-size-50() {
+	width: 100%;
+	@media (min-width:@max-width) {
+		width: 49%;
+	    vertical-align: top;
+	    display: inline-block;
+	}
+}
+.x-size-25() {
+	width: 50%;
+	@media (min-width:@max-width) {
+		width: 25%;
+	}
+}
+.x-size-25-2n-1(@size: @pad2) {
+	width: 50%;
+	&:nth-child(2n+1) {	padding: @size;	padding-left: @size/2;}
+	&:nth-child(2n) {	padding: @size;	padding-right:@size/2;	}
+	@media (min-width:@max-width) {
+		width: 25%;
+	}
+}
+.x-size-25-2n(@size: @pad2) { 
+	width: 50%;
+	&:nth-child(2n) {	padding: @size;	padding-left: @size/2;}
+	&:nth-child(2n+1) {	padding: @size;	padding-right:@size/2;	}
+	@media (min-width:@max-width) {
+		width: 25%;
+	}
+}
+.x-size-50-2n-1(@size: @pad2) {
+	width:100%;
+	@media (min-width:@max-width) {
+		&:nth-child(2n+1) {	padding: @size;	padding-left: @size/2;}
+		&:nth-child(2n) {	padding: @size;	padding-right:@size/2;	}
+		width: 50%;
+	}
+}
+.x-size-50-2n(@size: @pad2) {
+	width:100%;
+	@media (min-width:@max-width) {
+		width: 50%;
+		&:nth-child(2n) {	padding: @size;	padding-left: @size/2;}
+		&:nth-child(2n+1) {	padding: @size;	padding-right:@size/2;	}
+	}
+}
+
+.chevronlist() {
+	a {
+		display: block;
+		text-align: left;
+		padding: @pad-list;
+		padding-right: @pad*3;
+		text-decoration: none;
+		position: relative;
+		.bborder;
+		&:after {
+			.icon-chevron-right;
+			top: 50%;
+			margin-top: -@pad;
+			position: absolute;
+			right: @pad*2;
+		}
+	}
+}
+
+
+
+
+@font-face {
+  font-family: 'ALSRubl-Tahoma';
+  src: url('rouble-sign/alsrubl-tahoma-regular.eot');
+  src: url('rouble-sign/alsrubl-tahoma-regular.eot?#iefix') format('embedded-opentype'),url('rouble-sign/alsrubl-tahoma-regular.woff') format('woff'), url('rouble-sign/alsrubl-tahoma-regular.ttf') format('truetype'), url('rouble-sign/alsrubl-tahoma-regular.svg#ALSRublTahomaItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ALSRubl-Tahoma';
+  src: url('rouble-sign/alsrubl-tahoma-bold.eot');
+  src: url('rouble-sign/alsrubl-tahoma-bold.eot?#iefix') format('embedded-opentype'), url('rouble-sign/alsrubl-tahoma-bold.woff') format('woff'), url('rouble-sign/alsrubl-tahoma-bold.ttf') format('truetype'), url('rouble-sign/alsrubl-tahoma-bold.svg#ALSRublTahomaItalic') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*
+  ХТМЛ: 100 <span class="b-rub">Р</span>
+  Если вам нужен рубль в нескольких шрифтах, используйте .b-rub_tahoma, вместо .b-rub
+*/
+.b-rub, .b-rub_tahoma {
+  font-family: 'ALSRubl-Tahoma', Tahoma, sans-serif;
+  line-height: normal;
+}
+.rouble() {
+		&:after {
+		content: '\420';
+		.b-rub;
+	}
+}
+
+
+.pop-up(@pos: fixed) {
+	//display: none;
+	position: @pos;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	background: @color-border;
+	z-index: 99;
+	padding: @pad2;
+	> * {
+		position: relative;
+		max-width: @max-width;
+		box-shadow: 0 0 @bpad*2 @color-txt;
+		padding: @pad2;
+		.radius(@pad2);
+		margin: 0 auto;
+		background: @color-back;
+		.close {
+			position: absolute;
+			right: @pad2;
+			top: @pad;
+			&:after {
+				.icon-cancel;
+				font-size: @small;
+			}
+		}
+	}
+}
+
+
+
+.inliner() { // в процессе изменения
+  word-spacing: -.36rem; // Verdana
+   // display: table; //Лекарство для webkit
+  > * {
+    display: inline-block;
+    vertical-align: top;
+    word-spacing: normal; // возвращаем нормальное состояние
+  }
+}
+.justifier() {
+  text-align: justify;
+-webkit-text-align-last: justify;
+   -moz-text-align-last: justify;
+  -ms-text-align-last: justify;
+   -o-text-align-last: justify;
+    text-align-last: justify;
+  line-height: 0;
+  > * {
+    display: inline-block;
+    vertical-align: top;
+    line-height: normal;
+    text-align: left;
+    padding-top: @pad2/2; // fix bottom magic padding
+  }
+  &:after {
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    content: '';
+    display: inline-block;
+  }
+}
+
+.ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+ -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.tableToBlocks() {
+  display: block;
+  width: 100%;
+  > tbody, > thead {
+    display: block;
+    width: 100%;
+    > tr, > th {
+      display: block;
+      width: 100%;
+      > td {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+.table() {
+	>tbody> tr> td, >tbody> tr>  th {
+		padding: @pad/2;
+		.border(darken(@grey2,10%));
+		font-size: @pad-list;
+	}
+}
+.table-overflow-x() {
+	display: block;
+	overflow-y: hidden;
+	position: relative;
+	> tbody {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		display: block;
+		width: 100%;
+	}
+	&::after {
+		width: @pad;
+		height: 40000px;
+		.gradient-hor(@color-border-w, @color-back);
+		border-right: @bpad solid #f7f7f7;
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+	}
+}
+
+.socio() {
+	display: block;
+	margin: @pad;
+	.inliner;
+	a {
+		.circle(@pad*5, @color-back3);
+		.radius(50%);
+		text-shadow: none;
+		color: transparent;
+		&::before {
+			color: @color-back;
+		}
+		&[href*="vk.com"],
+		&[href*="vkontakte.ru"] {
+			&::before {
+				.icon-vk2;
+			}
+		}
+		&[href*="ok.ru"],
+		&[href*="odnoklassniki.ru"]{
+			&::before {
+				.icon-odnoklassniki;
+			}
+		}
+		&[href*="facebook.com"] {
+			&::before {
+				.icon-facebook;
+			}
+		}
+		&[href*="twitter.com"] {
+			&::before {
+				.icon-twitter;
+			}
+		}
+		&[href*="youtube"] {
+			&::before {
+				.icon-youtube;
+			}
+		}
+	}
+}
+
+
+.group(@color: @grey; @size: @pad-list){
+  .border(@color);
+  .radius(@size);
+  margin: @size 0;
+  padding: 0;
+  > li{
+    > a{
+      .ellipsis();
+      display: block;
+      padding: @size @size*2 @size @size;
+      .bborder(@color);
+      background: @color-back;
+      text-decoration: none;
+      position: relative;
+      
+      &:after{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -@size/2;
+        margin-right: @size;
+        .icon-chevron-right();
+      }
+      
+      &:hover, &:active {
+        background:@color-link;
+        color: @color-back;
+      }
+    }
+  }
+
+  li:nth-child(1) a {
+    .radius(@size @size 0 0);
+    .no-tborder;
+  }
+  li:nth-last-child(1) a{
+    .radius(0 0 @size @size);
+  	.no-bborder;
+  }
+  
+  &.flat{
+    .radius(0);
+    .box-shadow(none);
+    li{
+      a{
+        .radius(0);
+        border: 0;
+        border-bottom: 1px solid @border-color;
+      }
+      &:last-child a{
+        border:0;
+      }
+    }
+  }
+  &.noshadow{
+    .box-shadow(none);
+  }
+}
+
+

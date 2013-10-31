@@ -1,0 +1,402 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html{
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+	display: block;
+}
+body{
+	overflow-x: hidden;
+	background: @color-back;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: @color-txt;
+	font-size: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+}
+img{
+	display: block !important;
+	max-width: 100% !important;
+	height: auto !important;
+}
+#eski-root{
+	width: 100%;
+	background: @color-back;
+}
+.wrap{
+	margin: 0 auto;
+	max-width: @max-width;
+}
+
+
+//   /$$$$$$$$                                                                   /$$                
+//  |__  $$__/                                                                  | $$                
+//     | $$ /$$   /$$  /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$   /$$$$$$ | $$$$$$$  /$$   /$$
+//     | $$| $$  | $$ /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$|____  $$ /$$__  $$| $$__  $$| $$  | $$
+//     | $$| $$  | $$| $$  \ $$| $$  \ $$| $$  \ $$| $$  \__/ /$$$$$$$| $$  \ $$| $$  \ $$| $$  | $$
+//     | $$| $$  | $$| $$  | $$| $$  | $$| $$  | $$| $$      /$$__  $$| $$  | $$| $$  | $$| $$  | $$
+//     | $$|  $$$$$$$| $$$$$$$/|  $$$$$$/|  $$$$$$$| $$     |  $$$$$$$| $$$$$$$/| $$  | $$|  $$$$$$$
+//     |__/ \____  $$| $$____/  \______/  \____  $$|__/      \_______/| $$____/ |__/  |__/ \____  $$
+//          /$$  | $$| $$                 /$$  \ $$                   | $$                 /$$  | $$
+//         |  $$$$$$/| $$                |  $$$$$$/                   | $$                |  $$$$$$/
+//          \______/ |__/                 \______/                    |__/                 \______/              
+a{
+	.transitions();
+	display: inline-block;
+	padding: @pad/2 0;
+	color: @color-link;
+	font-weight: bold;
+	word-break: break-word;
+}
+
+.bold{font-weight: bold;}
+h1,h2,h3,h4,h5,h6{margin: @pad*2 0 @pad;}
+h1 a,h2 a,h3 a{padding:0;}
+.h1(){.bold();font-size: @xxxl;}
+.h2(){.bold();font-size: @xxl;}
+.h3(){.bold();font-size: @xl;}
+.h4(){.bold();font-size: @l;}
+h1{.h1();}
+h2{.h2();}
+h3{.h3();}
+h4,h5,h6{.h4();margin: 0 !important;
+}
+p {
+	margin: 0;
+	margin-bottom: @pad;
+	width: auto;	
+	font-size: @normal;
+	line-height: 120%;
+	height: auto;
+	a{
+		padding: 0;
+		display: inline;
+	}
+}
+
+table,
+form,
+input,
+select,
+textarea,
+iframe,
+object{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	font-size: @normal;
+}
+label{
+	display: block;
+	margin-top: @pad;
+	margin-bottom: @pad/2;
+	font-weight: bold;
+	font-size: 90%;
+}
+.light{
+	font-weight: normal;
+}
+
+input, button {
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+	.border(@color-txt3);
+	color: @color-txt2;
+	padding: @pad/2 @pad;
+	&[type='text'],
+	&[type='password'],
+	&[type='email'],
+	&[name="email"] {
+		padding: @pad/2 @pad;
+	}
+	&[type='submit'],
+	&[type='button'] {
+	.btn-flat;
+	}
+	&[type="radio"],
+	&[type="checkbox"] {
+	width: auto;
+	}
+	&:focus {
+	outline: none;
+	}
+}
+button {
+	.btn-flat;
+}
+select {	
+	padding: 0;
+	&:focus {
+	outline: none;
+	}
+}
+
+
+//    /$$$$$$                                      /$$     /$$       /$$                    
+//   /$$__  $$                                    | $$    | $$      |__/                    
+//  | $$  \__/  /$$$$$$  /$$$$$$/$$$$   /$$$$$$  /$$$$$$  | $$$$$$$  /$$ /$$$$$$$   /$$$$$$ 
+//  |  $$$$$$  /$$__  $$| $$_  $$_  $$ /$$__  $$|_  $$_/  | $$__  $$| $$| $$__  $$ /$$__  $$
+//   \____  $$| $$  \ $$| $$ \ $$ \ $$| $$$$$$$$  | $$    | $$  \ $$| $$| $$  \ $$| $$  \ $$
+//   /$$  \ $$| $$  | $$| $$ | $$ | $$| $$_____/  | $$ /$$| $$  | $$| $$| $$  | $$| $$  | $$
+//  |  $$$$$$/|  $$$$$$/| $$ | $$ | $$|  $$$$$$$  |  $$$$/| $$  | $$| $$| $$  | $$|  $$$$$$$
+//   \______/  \______/ |__/ |__/ |__/ \_______/   \___/  |__/  |__/|__/|__/  |__/ \____  $$
+//                                                                                 /$$  \ $$
+//                                                                                |  $$$$$$/
+//                                                                                 \______/ 
+
+/*выравнивание по центру*/
+.x {margin: 0 auto;text-align: center;}
+
+
+
+
+.ajax{
+	.radius(3em);
+	display: inline-block;
+	padding: @pad @pad*1.5;
+	background: @color-link;
+	color: #fff !important;
+	text-decoration: none;
+	
+	font-size: @small;
+
+	&:after{
+	content: "...";
+	}
+}
+
+
+
+.mobile-only{
+	/*только в мобильной версии, скрываем на планшетах*/
+}
+.tablet-only{
+	display: none;
+}
+
+
+
+
+
+
+
+//   /$$   /$$                           /$$                    
+//  | $$  | $$                          | $$                    
+//  | $$  | $$  /$$$$$$   /$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$ 
+//  | $$$$$$$$ /$$__  $$ |____  $$ /$$__  $$ /$$__  $$ /$$__  $$
+//  | $$__  $$| $$$$$$$$  /$$$$$$$| $$  | $$| $$$$$$$$| $$  \__/
+//  | $$  | $$| $$_____/ /$$__  $$| $$  | $$| $$_____/| $$      
+//  | $$  | $$|  $$$$$$$|  $$$$$$$|  $$$$$$$|  $$$$$$$| $$      
+//  |__/  |__/ \_______/ \_______/ \_______/ \_______/|__/      
+//                                                              
+//                                                              
+//                                                              
+
+header {
+	.wrap;
+	.hidden-block {
+		display: none;
+		ul {
+			.chevronlist;
+			text-align: left;
+		}
+	}
+	ul.header {
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		.bborder;
+		li {
+			float: left;
+			a {
+				text-decoration: none;
+				box-shadow: -@bpad 0 0 @color-border, inset @bpad 0 0 @color-border-w;
+				display: block;
+				color: @color-txt;
+				margin: 0;
+				.small;
+				.transitions;
+				&.active {
+					color: @color-link-hover;
+				}
+			}
+		}
+		.btn {
+			text-align: center;
+			a {
+				padding: @pad*2;
+				&::before {
+					padding-right: @pad*2;
+				}
+				&:empty:before { // Когда у кнопки нет текста, убираем отступ
+					padding-right: 0;
+				}
+			}
+			&#search a::before {.icon-search;}
+			&#cart a::before {.icon-cart-3;}
+			&#menu a::before {.icon-reorder;}
+			&#user a::before {.icon-user;}
+			&#region a::before {.icon-location;}
+			&#back a::before {.icon-arrow-left;}
+			&#next a::after {.icon-arrow-right; padding-right: 0; padding-left: @pad;}
+		}
+		&.top-line {
+			.logo {
+				width: 45%;
+				a {
+					display: inline-block;
+					margin: 0 0;
+					padding: @pad;
+					img {
+
+					}
+				}
+			}
+			.tel {
+				width: 55%;
+				padding: @pad;
+				text-align: right;
+				a {
+					box-shadow: none;
+					padding: 0;
+					.dotted;
+					display: inline-block;
+					margin: @pad/2;
+				}
+			}
+		}
+
+		&.fixed {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			max-width: 768px;
+			z-index: 99999;
+			background-color: fadeout(@color-back,10%);
+		}
+	}
+}
+
+
+//   /$$$$$$$$                    /$$                        
+//  | $$_____/                   | $$                        
+//  | $$     /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$ 
+//  | $$$$$ /$$__  $$ /$$__  $$|_  $$_/   /$$__  $$ /$$__  $$
+//  | $$__/| $$  \ $$| $$  \ $$  | $$    | $$$$$$$$| $$  \__/
+//  | $$   | $$  | $$| $$  | $$  | $$ /$$| $$_____/| $$      
+//  | $$   |  $$$$$$/|  $$$$$$/  |  $$$$/|  $$$$$$$| $$      
+//  |__/    \______/  \______/    \___/   \_______/|__/      
+//                                                           
+//                                                           
+//                                                           
+/*footer styling*/
+/*colors*/
+@color: @color-link;
+@color2: lighten(@color,80%);
+
+.pre-footer{
+	.gradi-horizontal(@color-back,darken(@color-back,30%));
+	display: block;
+	margin: @pad 0 0 0;
+	height: 1px;
+}
+footer{
+	background: @color-footer;
+	a{
+	line-height: 1;
+	}
+}
+.navi-bottom {
+	display: block;
+	margin: @pad 0;
+	width: 100%;
+	text-align: center;
+	
+	ul{
+		margin: 0 !important;
+		padding: 0 !important;
+		
+		li{
+		display: inline;
+		margin: 0;
+		padding: 0;
+		
+		a{
+			display: inline-block;
+			margin: 0;
+			padding: @pad/2 @pad*1.4;
+			font-weight: bold;
+			font-size: @small;
+		}
+		}
+	}
+}
+
+a.full {
+	.radius(@pad*4);
+	margin: @pad/2 0;
+	padding: @pad @pad*2;
+	background: darken(@color-link,0%);
+	color: @color-back;
+	text-decoration: none;
+	font-size: @small;
+}
+
+.author{
+	margin: @pad2 0;
+	
+	a{
+	/*margin: @pad 0 @pad2 0;
+	padding: @pad;
+	font-size: @tiny;
+	background: @blue2;*/
+	/*text-decoration: none;
+	color: #fff;*/	
+	text-decoration: none;
+	padding: 0;
+	font-size: @tiny;
+	
+	.txt{
+		display: inline-block;
+		color: @color-link;
+		line-height: 130%;
+		border-bottom: 1px solid darken(@color-link,-20%);
+	}	
+	}
+}
+.eski-mobi-icon{
+	display: inline-block;
+	margin-bottom: -4px;
+	margin-right: 4px;
+	position: relative;
+	
+	span{
+	display: block;
+	position: absolute;
+	}
+	.body{
+	background: #31c5b9;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	}
+	.p1,
+	.p2{
+	width: 8px;
+	height: 4px;
+	left: 4px;
+	}
+	.p1{
+	background: #000;
+	top: 4px;
+	}
+	.p2{
+	background: #fff;
+	top: 8px;
+	}
+}
