@@ -11,6 +11,7 @@
 //                                                                                                              
 
 .btn-flat(@color: @color-btn) {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   margin: @pad2 0;
   padding: @pad2/2 @pad2;
   .shadow(0 @pad/2 0 darken(@color,15%));
@@ -33,6 +34,7 @@
 }
 
 .btn-skmrph(@color: @color-btn) {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -54,6 +56,7 @@
 }
 
 .btn-simple(@color: @color-btn) {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -130,6 +133,7 @@
 }
 
 .label(@color: @color-accent) {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   text-shadow: @bpad @bpad @bpad @color-back;
   .gradient(lighten(@color,15%),@color);
   display: inline-block;
@@ -141,6 +145,7 @@
   box-shadow: @bpad @bpad @bpad @color-border;
 }
 .nick(@color: @color-txt) {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   .icon-caret-left;
   position: absolute;
   text-shadow: none;
@@ -150,6 +155,7 @@
   z-index: 0;
 }
 .tag() { // Надо обновить
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   display: inline-block;
   padding: @pad/2 @pad2;
   margin: @pad2/2 @pad2/4;
@@ -176,6 +182,7 @@
 //                                                                                
 //                                                                                                                                                 
 .button-style(){
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   .unsel();
   .radius(@pad);
   display: inline-block;

@@ -9,8 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=yes" />
   
-  <link rel="stylesheet" href="css/style.css">
+  <!--realtime less compiler-->
+ <link rel="stylesheet/less" type="text/css" href="css/style.less">
+ <script src="js/less-1.3.3.min.js" type="text/javascript"></script>
   
+  <!--это для скопмилированного css
+  <link rel="stylesheet" href="css/style.css">
+  -->
   <!--apple web app-->
   <meta name="apple-mobile-web-app-title" content="eski.mobi">
   
@@ -19,112 +24,85 @@
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple/144.png" />
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple/144.png" />
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple/144.png" />
-  
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <!--для live refresh-->
+  <!--использовать только при локальной разработке
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-
+ -->
   </head>
-<body>
+<body id="top_page">
 
+<header>
+  
+  <ul class='header top-line'>
+    <li class='logo'>
+      <a href='#top_page'><img src="//sendflowers.ru/img/sendflowers3/main/header-logo.png"></a>
+    </li>
+    <li class='tel'>
+      <a href="tel:8002007090">8 800 200-70-90</a>
+      <a href="tel:8002007090">+7 495 974-70-90</a>
+    </li>
+  </ul>
+  <ul class='header fixed'>
+    <li id='cart' class="btn">
+    </li>
+    <li id='user' class="btn">
+    </li>
+  </ul>
+  <ul class='header navi'>
+    <li id='search' class="btn">
+      <a href='#top_page'></a>
+    </li>
+    <li id='cart' class="btn">
+      <a href='#top_page'></a>
+    </li>
+    <li id='menu' class="btn">
+      <a href='#top_page'>Каталог</a>
+    </li>
+    <li id='region' class="btn">
+      <a href='#top_page'>Регион</a>
+    </li>
+  </ul>
 
-<div class="header header-bar style-1">
-  <span class="left">
-    <a href="index.php" class="logo left">
-      <img src="img/logo.png" alt="" width="100%"/>
-    </a>
-  </span>
-  <span class="right">
-    <a href="#" class="left">Map</a>
-    <a href="#" class="left">Search</a>
-    <a href="#" class="left">Cart</a>
-  </span>
-  <div class="clear"></div>
-</div><!--header-->
+  <div id='menuBody' class='hidden-block'>
 
-<div class="header header-bar style-1">
-  <span class="left">
-    <a href="index.php" class="logo left">
-      <img src="img/logo.png" alt="" width="100%"/>
-    </a>
-  </span>
-  <span class="right">
-    <a href="#" class="left icon menu"><span class="icon-user"></span></a>
-    <a href="#" class="left icon menu"><span class="icon-search"></span></a>
-    <a href="#" class="left icon menu"><span class="icon-cart"></span></a>
-  </span>
-  <div class="clear"></div>
-</div><!--header-->
-
-<div class="header header-bar style-1 style-2">
-  <div class="level">
-    <a href="index.php" class="logo">
-      <img src="img/logo.png" alt="" width="100%"/>
-    </a>
+  	<ul>
+  		<li><a>Тестовый chevron-список 1</a></li>
+  		<li><a>Тестовый chevron-список 1</a></li>
+  		<li><a>Тестовый chevron-список 1</a></li>
+  		<li><a>Тестовый chevron-список 1</a></li>
+  		<li><a>Тестовый chevron-список 1</a></li>
+  		<li><a>Тестовый chevron-список очень длинное название</a></li>
+  	</ul>
   </div>
-  <div class="level wrap four">
-    <a href="#" class="menu">Menu</a>
-    <a href="#" class="menu">User</a>
-    <a href="#" class="menu">Search</a>
-    <a href="#" class="menu">Cart</a>
-  </div>
-</div><!--header-->
 
-<div class="header header-bar style-1 style-2">
-  <div class="level">
-    <a href="index.php" class="logo">
-      <img src="img/logo.png" alt="" width="100%"/>
-    </a>
-  </div>
-  <div class="level wrap two icons">
-    <a href="#" class="menu"><span class="icon-duck"></span>Products</a>
-    <a href="#" class="menu"><span class="icon-user"></span>Account</a>
-  </div>
-</div><!--header-->
 
-<div class="header header-bar style-1">
-  <span class="left">
-    <a href="index.php" class="logo left">
-      <img src="img/logo.png" alt="" width="100%"/>
-    </a>
-  </span>
-  <span class="right">
-    <a href="#" class="left icon menu"><span class="icon-reorder"></span></a>
-  </span>
-  <div class="clear"></div>
-</div><!--header-->
 
-<div class="header header-bar style-1">
-  <div class="wrap">
-    <span class="left">
-      <a href="index.php" class="logo left">
-        <img src="img/logo.png" alt="" width="100%"/>
-      </a>
-    </span>
-    <span class="right">
-      <a href="tel:+74956211701" class="left">+7 (495) 621-1701</a>
-    </span>
-    <div class="clear"></div>
+  <div id='regionBody' class='hidden-block'>
+  	<ul>
+  		<li><a>Тестовый chevron-список</a></li>
+  		<li><a>Тестовый chevron-список</a></li>
+  		<li><a>Тестовый chevron-список</a></li>
+  		<li><a>Тестовый chevron-список</a></li>
+  		<li><a>Тестовый chevron-список</a></li>
+  		<li><a>Тестовый chevron-список очень длинное название</a></li>
+  	</ul>
   </div>
-</div><!--header-->
 
-<div class="header header-bar style-1">
-  <div class="level three">
-    <a href="#" class="menu">Nav 1</a>
-    <a href="#" class="menu">Nav 2</a>
-    <a href="#" class="menu">Nav 3</a>
+  <div id='searchBody' class='hidden-block'>
+  	<ul>
+  		<li><a>Иконка по вертикали центруется с помощью position: absolute;,  top: 50%; margin-top: -@pad;</a></li>
+  	</ul>
   </div>
-</div><!--header-->
 
-<!--topmost hidden block-->
-<div class="top-menu" style="display: none;">
-  <div class="wrap">
-    <ul class="group flat noshadow">
-      <li><a href="#">Главная</a></li>
-      <li><a href="#">Контакты</a></li>
-      <li><a href="#">Оооооооочеень длинное название раздела, что даже не помещается</a></li>
-      <li><a href="#">Доставка</a></li>
-    </ul>
+
+  <div id='cartBody' class='hidden-block'>
+
+  	<ul>
+  		<li><a>Шаблон для вложенных списков пока в процессе доработки</a></li>
+  	</ul>
   </div>
-</div><!--topmost-->
+
+</header>
 
 <div id="eski-root">
