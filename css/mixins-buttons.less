@@ -26,7 +26,7 @@
   &:hover {
     .gradient(darken(@color,5%), darken(@color,5%));
   }
-  &:active {
+  &:active, &.active {
     .shadow(0 @pad/8 0 darken(@color,15%));
     top: @bpad*2;
     position: relative;
@@ -49,9 +49,9 @@
     .gradient(lighten(@color,15%), darken(@color,15%));
   }
   &:active, &.active {
-    .gradient(darken(@color,15%), lighten(@color,15%));
-    .shadow(inset 0 0 @bpad*2 darken(@color,25%));
-    border-color: darken(@color,27%);
+    .gradient(lighten(@color,10%), darken(@color, 20%));
+    box-shadow: inset 0 0 @pad fadeout(@color-txt,40%);
+    //border-color: darken(@color,27%);
   }
 }
 
@@ -70,7 +70,7 @@
     .gradient(darken(@color,3%), darken(@color,8%));
     color: lighten(@color,50%);
   }
-  &:active {
+  &:active, &.active {
     .gradient(darken(@color,15%), darken(@color,15%));
     color: lighten(@color,10%);
     border: @bpad solid darken(@color,25%);

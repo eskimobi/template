@@ -103,11 +103,12 @@ label{
 	font-weight: normal;
 }
 
-input, button {
+input, button, textarea {
 -webkit-tap-highlight-color: rgba(0,0,0,0);
 	.border(@color-txt3);
 	color: @color-txt2;
 	padding: @pad/2 @pad;
+	margin: @pad/2 0 @pad;
 	&[type='text'],
 	&[type='password'],
 	&[type='email'],
@@ -116,7 +117,7 @@ input, button {
 	}
 	&[type='submit'],
 	&[type='button'] {
-	.btn-flat;
+	.btn-skmrph;
 	}
 	&[type="radio"],
 	&[type="checkbox"] {
@@ -127,16 +128,24 @@ input, button {
 	}
 }
 button {
-	.btn-flat;
+	.btn-skmrph;
+	margin: @pad/2 0 @pad;
 }
 select {	
 	padding: 0;
+	margin: @pad/2 0 @pad;
 	&:focus {
 	outline: none;
 	}
 }
 
-
+textarea{
+	.transitions(height, 0.3s);
+	height: @pad*6;
+	&:focus {
+		height: @pad*10;
+	}
+}
 //    /$$$$$$                                      /$$     /$$       /$$                    
 //   /$$__  $$                                    | $$    | $$      |__/                    
 //  | $$  \__/  /$$$$$$  /$$$$$$/$$$$   /$$$$$$  /$$$$$$  | $$$$$$$  /$$ /$$$$$$$   /$$$$$$ 
@@ -264,7 +273,6 @@ header {
 				a {
 					box-shadow: none;
 					padding: 0;
-					.dotted;
 					display: inline-block;
 					margin: @pad/2;
 				}
