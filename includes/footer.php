@@ -17,36 +17,13 @@
   </div>
 </footer>
 
-<!--css only modal-->
-<!--http://drublic.github.io/css-modal/#!-->
-
-<script>
-/*
-$("#menu").mmenu({
-  configuration: {
-		hardwareAcceleration: true
-	}
-});
-*/
-
-var jPM = $.jPanelMenu({
-    menu: '#menu',
-    trigger: '.menu-trigger',
-    animated: false
-});
-jPM.on();
-</script>
-
 
 <script src="js/jquery.min.js"></script>
 <script src="js/functions.js" type="text/javascript"></script>
 
 <script src="js/bxslider/jquery.bxslider.min.js"></script>
-<!--<link href="js/bxslider/jquery.bxslider.css" rel="stylesheet"/>-->
-<!--<script src="js/jquery.fittext.js"></script>-->
 
-
-
+<!--uptime monitor-->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -57,6 +34,7 @@ jPM.on();
   ga('send', 'pageview');
 
 </script>
+<!--end uptime-->
 
 </body>
 </html>
