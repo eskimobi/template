@@ -2,14 +2,14 @@
 @color-txt2: lighten(@color-txt,20%);
 @color-txt3: lighten(@color-txt,40%);
 @color-back: #fff; 
-@color-back2: #432e2e; // переименовать в что-то типа back-dark
+@color-back2: #fff; // переименовать в что-то типа back-dark
 @color-back3: #338DCC;
 @color-back4: rgba(0,0,0,.05);
 
 
-@color-link: #ff0000;
+@color-link: #aa5500;
 @color-accent: #1B9CD8;
-@color-accent2: #FACD00;
+@color-accent2: #237888;
 @color-btn: @color-accent2;
 
 //   /$$$$$$$                                       /$$$$$$   /$$               /$$                    
@@ -23,191 +23,81 @@
 //                                                                    /$$  | $$                        
 //                                                                   |  $$$$$$/                        
 // 
-
-.wrap {
-	overflow: hidden; // Странный горизонтальный скролл
-}
-header {
-	background-image: url(../img/back.jpg);
-	background-size: 100%;
-	background-repeat: no-repeat;
-}
-#eski-root {
-}
-.margin() {
-	margin: @pad/2 0 @pad-list;
-}
-.marginList() {
-	margin: @pad/2 0 @pad-list @pad-list*2;
-}
-
-.btn-skmrph() {
-	color: @color-txt;
-	background: @color-accent2;
-	text-shadow: @bpad @bpad @bpad @color-border-w;
-	&:hover, &:active {
-	background: @color-accent2;
+/* Базовые стили, просто к тегам, частовстречающимся классам */
+.hint(@hint: 'Название подсказки') {
+	margin-top: @pad*5;
+	position: relative;
+	&::before {
+		content: @hint;
+		display: block;
+		position: absolute;
+		width: 100%;
+		top: -@pad*3.5;
+		.h4;
+		.ellipsis;
 	}
 }
 
-body {
-}
-#indent {
-	padding: @pad-list;
-	input {
-		width: 100% !important;
-		&[type="radio"] {
-			width: @pad*3 !important;
+.box {
+	margin: @pad-list;
+	&:nth-of-type(1) {
+		h3 {
+			.ellipsis;
+		}
+		ul.group {
+			.group;
+			.hint('.group');
+		}
+		ul.chevronlist {
+			.chevronlist;
+			.hint('.chevronlist');
 		}
 	}
-	div {
-		padding: 0 !important;
-	}
-	img {
-		width: 35%;
-	}
-	h1 {
-		.margin;
-		~ br {display: none;}
-	}
-	h2 {
-		.xlarge;
-	}
-	.catalog-element {
-		div {
-			.margin;
-			text-align: left;
-			line-height: @xl;
-		}
-		> br {display: none;}
-	}
-	p {
-		text-align: left !important;
-		.margin;
-		line-height: @xl;
-	}
-	ol {
-		.marginList;
-		padding: 0;
-		li {
-			margin: @pad/2 0 @pad;
-		}
-	}
-	ul {
-		.marginList;
-		list-style-type: disc;
-		li {
-			margin: @pad/2 0 @pad;
-		}
-	}
-
-	u a {
-		.light;
-		display: inline;
-	}
-	blockquote {
-		background: @color-back4;
-		.margin !important;
-		padding: @pad/2 @pad-list !important;
-		p {
-			.small;
-		}
-	}
-	div[style="width: 300px; padding: 5px; margin: 5px; border: 4px double rgb(0, 0, 0); float: right;"] {
-		width: 100% !important;
-		padding: @pad/2 @pad-list !important;
-		.margin !important;
-		.no-border !important;
-		background: @color-back4;
-	}
-	a {
-		padding: 0;
-	}
-	label {
-		.light;
-		.small;
-	}
-	input {
-		.small;
-	}
-	form {
-		td {
-			.small;
-		}
-		.small;
-		img[alt="CAPTCHA"], img[src*="captcha"] {
-			margin: @pad/2 0;
-			width: @pad*12;
-		}
-		&[action="../mega_client/preget.php"] {
-			> table {
-				.tableToBlocks;
-			}
-			.button2 {
-				display: none;
-			}
-		}
-	}
-	select {
-		.border(@color-txt3);
-		padding: @bpad*2 @bpad*2 @bpad*2 @pad;
-	}
-	.data-table {
-		thead {
-			td {
-				.xlarge;
-				.bold;
-			}
-		}
-		+ p font.text {
-			a {
-				padding: 0 @pad/2;
-			}
-		}
-	}
-
-	.otvtab {
-		.table;
-		span {
-			display: block;
-			&.quest_about {
-				color: @color-txt3;
-				b {
-					color: @color-txt;
-					padding-left: @pad/2;
-				}
-				.temavo {
-					color: @color-txt;
-					.margin;
-					padding: @pad/2 !important;
-					background: @color-back4;
-					&:empty {
-						&::before {
-							font-style: italic;
-							color: @color-txt3;
-							content: 'без темы';
-						}
-					}
-				}
-			}
-			&.question {
-				.margin;
-				.small;
-				padding-left: @pad/2;
-			}
-		}
+	&:nth-of-type(2) {
 		a {
-			.margin;
-			padding-left: @pad/2;
+			&.flat {
+				.btn-flat(#F47920);
+				display: block;
+			}
+			&.skmrph {
+				.btn-skmrph(#873656);
+			}
+			&.simple {
+				.btn-simple(#4756f9);
+			}
 		}
-		br {
-			display: none;
+	}
+	&:nth-of-type(4) {
+		.paginator {
+			text-align: center;
+			.hint('.inliner;');
+			.inliner;
+			a {
+				.btn-simple(@grey2);
+				color: @color-txt3;
+				margin-right: @pad;
+			}
 		}
-		td[colspan="6"] {
-			display: none;
+		.socio {
+			.socio(@color-accent);
+			.hint('href-based-socio-icons:');
+			text-align: center;
+			a {margin: @pad/2;}
+			img {
+				display: none !important;
+			}
+		}
+	}
+	&:nth-of-type(5) {
+		table {
+			.table;
+			.table-overflow-x;
+			a {white-space: nowrap;}
 		}
 	}
 }
+
+
 //   /$$   /$$                           /$$                    
 //  | $$  | $$                          | $$                    
 //  | $$  | $$  /$$$$$$   /$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$ 
@@ -219,81 +109,9 @@ body {
 //                                                              
 //                                                              
 //       
+/* Стили для шапки */
 
-header {
-	ul.header.top-line {
-		.logo {
-			width: 30%;
-			a {
-				padding: 0 0 0 @pad*2;
-				img {
-					height: @pad*8 !important;
-					width: auto;
-				}
-			}
-		}
-		.tel {
-			float: right;
-			width: 70%;
-			padding: @pad/2 @pad;
-			a {
-				text-shadow: @bpad @bpad @bpad @color-border-w;
-				&#tel {
-					.large;
-				}
-				&#call {
-					.tiny;
-					&::after {
-						.icon-caret-right;
-						padding-left: @pad/2;
-					}
-				}
-				white-space: nowrap;
-				.bborder(@color-txt3);
-			}
-		}
-	}
-	ul.header.nav {
-		#logo {
-			width: 45%;
-			a {
-			}
-		}
-		#uslugi {
-			width: 35%;
-		}
-		#menu {
-			width: 20%;
-		}
-		a.active {
-			color: @color-link;
-		}
-	}
-}
 
-#uslugiBody {
-	p {
-		margin: 0;
-		a {
-			text-decoration: none;
-			padding: @pad-list;
-			display: block;
-			.bborder;
-			color: @color-txt;
-			.small;
-		}
-	}
-	img {
-		float: left;
-		width: @pad*5;
-		padding-right: @pad-list;
-	}
-	div {
-		margin: 0 !important;
-		display: inline;
-	}
-	> div, > br {display: none;}
-}
 //   /$$      /$$           /$$          
 //  | $$$    /$$$          |__/          
 //  | $$$$  /$$$$  /$$$$$$  /$$ /$$$$$$$ 
@@ -305,132 +123,8 @@ header {
 //                                       
 //                                       
 //      
-#indent {
-	.pkasko-reg-menu {
-	 	overflow: hidden;
-	 	margin-bottom: @pad-list;
-	 	.pkasko-tab {
-	 		.btn-skmrph;
-	 		margin: 0 !important;
-	 		width: 50%;
+/* Основные стили */
 
-	 		&.active {
-	 			.btn-skmrph(@color-back3);
-	 			background: @color-back3 !important;
-	 			a {
-	 				color: @color-back;
-	 				text-shadow: @bpad @bpad @bpad @color-border;
-	 			}
-	 		}
-	 		&:first-child {
-	 			.radius(@pad 0 0 @pad);
-	 		}
-	 		&:last-child {
-	 			.radius(0 @pad @pad 0);
-	 			.no-lborder;
-	 		}
-	 		a {
-	 			text-decoration: none;
-	 			color: @color-txt;
-	 			padding: @pad;
-	 			.small;
-	 		}
-	 	}
-	 }
-	 #reg-form {
-	 	.small;
-	 	input[type="text"] {
-	 		.small;
-	 	}
-	 }
-	.pkasko-save-car {
-	 	td, input[type="text"], select {.small;}
-		#dat{ 
-			> table:first-child {
-				.tableToBlocks;
-			}
-			> table:first-child,
-			> .pkasko-calc-pers {
-				.margin;
-				background: @color-accent2;
-				padding: @pad-list !important;
-				.radius(@pad);
-			}
-		}
-	}
-	#show-pkasko-save-car {
-		display: block;
-		.margin;
-		width: 100%;
-		.small;
-		padding: @pad @pad*4;
-		position: relative;
-		&::after, &::before {
-			.icon-arrow-down;
-			top: 50%;
-			margin-top: -@l/2;
-			.large;
-			position: absolute;
-		}
-		&::before {
-			left: @pad*2;
-		}
-		&::after {
-			right: @pad*2;
-		}
-	}
-	.pkasko-calc-pers {
-		.margin;
-		table {
-			td {
-				vertical-align: bottom;
-				.small;
-				input, select {margin-bottom: 0;}
-				&:nth-of-type(1) {
-					line-height: @pad*3;
-					padding-right: @pad;
-				}
-				&:nth-of-type(2),
-				&:nth-of-type(3) {
-					input {
-						width: @pad*6 !important;;
-						margin-right: @pad*2;
-					}
-				}
-				.pkasko-calc-button {
-					.btn-simple(@color-txt3);
-					margin-left: @pad;
-					.small !important;
-					width: @pad*4;
-					white-space: nowrap;
-					//overflow: hidden;
-					color: transparent !important;
-					&#add_driver::before {
-						.icon-plus;
-						color: @color-back;
-					}
-					&.delbtn::before {
-						.icon-minus;
-						color: @color-back;
-					}
-				}
-			}
-		}
-	}
-	#calc-data {
-		.margin;
-		.table;
-		tr:nth-of-type(2n) {
-			background-color: @color-back4;
-		}
-	}
-	div[style="BORDER-BOTTOM: #ff0000 1px solid; BORDER-LEFT: #ff0000 1px solid; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; BORDER-TOP: #ff0000 1px solid; BORDER-RIGHT: #ff0000 1px solid"] {
-		padding: @pad/2 @pad-list !important;
-		.margin;
-		background: @color-back4;
-		.no-border !important;
-	}
-}
 
 //   /$$$$$$$$                    /$$                        
 //  | $$_____/                   | $$                        
@@ -443,52 +137,4 @@ header {
 //                                                           
 //                                                           
 // 
-.lentamod {
-	.lenta-cenrt {
-		text-align: center;
-		.inliner;
-		> div {
-			padding: 0 !important;
-			float: none !important;
-			display: inline-block;
-			margin: @pad 0.5%;
-			width: 31.83%;
-			@media( min-width: 600px) {
-				width: 19%;
-			}
-			&:last-child {display: none;}
-			img {
-				height: @pad*7 !important;
-				width: auto;
-			}
-			a {
-				text-decoration: none;
-				color: @color-txt;
-				font-size: @pad*1.4;
-				padding-top: 0;
-				&:first-child {
-					margin-bottom: -@pad/2;
-				}
-			}
-		}
-	}
-}
-
-footer {
-	background-color: @color-back;
-	padding: @pad-list @pad @pad;
-	.radius(0 0 @pad-list @pad-list);
-	.full {
-		background-color: @color-btn;
-	}
-	.copyright {
-		.tiny;
-		display: block;
-		.margin;
-		color: @color-txt3;
-	}
-}
-
-
-img {width: 100%;}
-
+/* Стили для футера */

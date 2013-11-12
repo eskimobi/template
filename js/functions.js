@@ -5,14 +5,6 @@ $(document).ready(function(){
 // Главная страница
 document.addEventListener("touchstart", function(){}, true);
 
-$('#menuBody h3').append('<span>');
-$('#menuBody h3 span').bind('click',function() {
-  $(this).toggleClass('active');
-  $(this).parent().next().slideToggle();
-  });
-
-$('a').attr('href','#');
-$('.picAndTextBlock br, .b-banner br, .b-catalog__bals br').after('<span class="space"> </span>');
 
 
 });

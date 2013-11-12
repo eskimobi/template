@@ -89,6 +89,11 @@
 			right: @pad*2;
 		}
 	}
+	> li:last-of-type {
+		a {
+			.no-bborder;
+		}
+	}
 }
 
 
@@ -221,12 +226,6 @@
 		padding: @pad/2;
 		.border(darken(@grey2,10%));
 		font-size: @pad-list;
-	}
-	>thead> tr> td {
-		padding: @pad/2;
-		.border(darken(@grey2,10%));
-		font-size: @pad-list;
-		background: @color-back4;
 	}
 }
 .table-overflow-x() {
