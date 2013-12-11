@@ -2,7 +2,15 @@
 
 <div class="wrap">
 
-<div class="box">
+<div id="slider" class="swipe">
+  <div class="slider-wrapper">
+    <div><img src="img/slide1.jpg"></div>
+    <div><img src="img/slide2.jpg"></div>
+    <div><img src="img/slide3.jpg"></div>
+  </div>
+</div>
+<ul id="position"></ul>
+<div class="box" id="first">
       <h1>Заголовок h1</h1>
       <h2>Заголовок h2</h2>
       <h3>Заголовок h3 в одну строку</h3>
@@ -20,7 +28,7 @@
       <input type="text" value="input">
       <textarea>textarea имеет :focus состояние</textarea>
 </div>
-<div class="box">
+<div class="box" id="second">
       <h4>Стили для кнопок лежат в mixin-buttons.less</h4>
       <button>Button</button>
       <input type="submit" value="<input type='submit'>">
@@ -28,10 +36,10 @@
       <a class="skmrph">Сквеморфизм</a>
       <a class="simple">Simple-style</a>
 </div>
-<div class="box">
+<div class="box" id="third">
       
 </div>
-<div class="box">
+<div class="box" id="fourth">
       <ul class="paginator">
             <li><a>1</a></li>
             <li><a>2</a></li>
@@ -47,7 +55,7 @@
         <a href="http://www.odnoklassniki.ru/kanaltv3" target="blank"> <img src="/upload/footer/5.png" width="16" height="16"></a>
       </div>
 </div>
-<div class="box">
+<div class="box" id="fifth">
 <table>
 <tbody>
 <tr>

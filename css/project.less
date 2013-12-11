@@ -1,3 +1,12 @@
+
+@color-border: rgba(0,0,0,.15);
+@color-border-w: rgba(255,255,255,.3);
+@grey: #777;
+@grey2: #eee;
+
+@color-footer: @color-back2;
+@color-hidden: #eee;
+
 @color-txt: #000;
 @color-txt2: lighten(@color-txt,20%);
 @color-txt3: lighten(@color-txt,40%);
@@ -8,6 +17,7 @@
 
 
 @color-link: #aa5500;
+@color-link-hover: lighten(@color-link,20%);
 @color-accent: #1B9CD8;
 @color-accent2: #237888;
 @color-btn: @color-accent2;
@@ -24,6 +34,34 @@
 //                                                                   |  $$$$$$/                        
 // 
 /* Базовые стили, просто к тегам, частовстречающимся классам */
+/* Swipe 2 required styles */
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.slider-wrapper { 
+  overflow: hidden;
+  position: relative;
+}
+.slider-wrapper > * {
+  float:left;
+  width:100%;
+  position: relative;
+  display: block;
+}
+#position {
+	.inliner;
+	text-align: center;
+	padding-top: @pad;
+	li {
+		.circle(@pad*2,@grey2);
+		margin: @pad/2;
+		&.on {
+			background-color: @color-accent;
+		}
+	}
+}
 .hint(@hint: 'Название подсказки') {
 	margin-top: @pad*5;
 	position: relative;
@@ -40,7 +78,7 @@
 
 .box {
 	margin: @pad-list;
-	&:nth-of-type(1) {
+	&#first {
 		h3 {
 			.ellipsis;
 		}
@@ -53,7 +91,7 @@
 			.hint('.chevronlist');
 		}
 	}
-	&:nth-of-type(2) {
+	&#second {
 		a {
 			&.flat {
 				.btn-flat(#F47920);
@@ -67,7 +105,7 @@
 			}
 		}
 	}
-	&:nth-of-type(4) {
+	&#fourth {
 		.paginator {
 			text-align: center;
 			.hint('.inliner;');
@@ -88,7 +126,7 @@
 			}
 		}
 	}
-	&:nth-of-type(5) {
+	&#fifth {
 		table {
 			.table;
 			.table-overflow-x;

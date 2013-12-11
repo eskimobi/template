@@ -21,7 +21,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/functions.js" type="text/javascript"></script>
 
-<script src="js/bxslider/jquery.bxslider.min.js"></script>
+<script src="js/swipe/swipe.js"></script>
 
 <!--uptime monitor-->
 <script>

@@ -235,7 +235,7 @@
   }
 }
 .table() {
-	>tbody> tr> td, >tbody> tr>  th {
+	>*>*>* {
 		padding: @pad/2;
 		.border(darken(@grey2,10%));
 		font-size: @pad-list;
@@ -245,7 +245,7 @@
 	display: block;
 	overflow-y: hidden;
 	position: relative;
-	> tbody {
+	> * {
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 		display: block;

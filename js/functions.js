@@ -6,6 +6,27 @@ $(document).ready(function(){
 document.addEventListener("touchstart", function(){}, true);
 
 
+var numSlides = $('.slider-wrapper > *').length;
+var lishki = '<li class="on" onclick="mySwipe.slide(0,400)"></li>'
+for (var i = 1; i < numSlides; i++) {
+  lishki+= '<li class="" onclick="mySwipe.slide('+i+',400)"></li>'
+}
+$('#position').append(lishki);
+window.mySwipe = new Swipe(document.getElementById('slider'), {
+  speed: 400,
+  auto: 3000,
+  continuous: true,
+  callback: function(pos) {
+
+      var i = bullets.length;
+      while (i--) {
+        bullets[i].className = 'off';
+      }
+      bullets[pos].className = 'on';
+
+    }
+});
+var bullets = $('#position > li');
 
 });
 
