@@ -29,6 +29,9 @@
   <!--использовать только при локальной разработке
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
  -->
+ <!-- этот meta-тег должен быть ПОСЛЕДНИМ meta-тегом -->
+ <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0" />
+ <!-- этот meta-тег должен быть ПОСЛЕДНИМ meta-тегом -->
   </head>
 <body id="top_page">
 
@@ -36,7 +39,7 @@
   
   <ul class='header top-line'>
     <li class='logo'>
-      <a href='#top_page'><img src="//sendflowers.ru/img/sendflowers3/main/header-logo.png"></a>
+      <a href='javascipt:;'><img src="//sendflowers.ru/img/sendflowers3/main/header-logo.png"></a>
     </li>
     <li class='tel'>
       <a href="tel:8002007090">8 800 200-70-90</a>
@@ -51,16 +54,16 @@
   </ul>
   <ul class='header navi'>
     <li id='search' class="btn">
-      <a href='#top_page'></a>
+      <a href='javascipt:;'></a>
     </li>
     <li id='cart' class="btn">
-      <a href='#top_page'></a>
+      <a href='javascipt:;'></a>
     </li>
     <li id='menu' class="btn">
-      <a href='#top_page'>Каталог</a>
+      <a href='javascipt:;'>Каталог</a>
     </li>
     <li id='region' class="btn">
-      <a href='#top_page'>Регион</a>
+      <a href='javascipt:;'>Регион</a>
     </li>
   </ul>
 
