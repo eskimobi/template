@@ -5,8 +5,6 @@
   <title>prototype by eski.mobi</title>
   
   <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=yes" />
   
   <!--realtime less compiler-->
@@ -29,6 +27,7 @@
   <!--использовать только при локальной разработке
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
  -->
+<meta name="MobileOptimized" content="320" />
  <!-- этот meta-тег должен быть ПОСЛЕДНИМ meta-тегом -->
  <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0" />
  <!-- этот meta-тег должен быть ПОСЛЕДНИМ meta-тегом -->
