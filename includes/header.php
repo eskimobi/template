@@ -5,7 +5,7 @@
   <title>prototype by eski.mobi</title>
   
   <meta name="HandheldFriendly" content="True" />
-  <meta name="format-detection" content="telephone=yes" />
+  <meta name="format-detection" content="telephone=no" />
   
   <!--realtime less compiler-->
  <link rel="stylesheet/less" type="text/css" href="css/style.less">
