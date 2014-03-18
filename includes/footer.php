@@ -4,7 +4,7 @@
 <footer>
   <div class="wrap">
   <div class="x">
-    <a class="full" href="javascript:void(0)" onclick="if(window.confirm('Хотите покинуть мобильную версию и перейти на просмотр полной? Скорость загрузки страниц существенно снизится и возрастёт потребление интернет трафика.')){Eski.desktop();ga('send','event','desktop','click');}return false;">Полная версия сайта</a>
+    <a class="full" href="javascript:void(0)" onclick="if(window.confirm('Внимание! Вы действительно хотите покинуть мобильный сайт и перейти к полной версии?')){Eski.desktop();ga('send','event','desktop','click');}return false;">Полная версия сайта</a>
   </div>
   
   <div class="wrap x">
