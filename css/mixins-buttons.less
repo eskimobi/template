@@ -11,7 +11,6 @@
 //                                                                                                              
 
 .btn-flat(@color: @color-btn) {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
   margin: @pad2 0;
   padding: @pad2/1.8 @pad2 @pad2/2.2;
   .shadow(0 @pad/2 0 darken(@color,15%));
@@ -23,10 +22,7 @@
   border: @bpad solid darken(@color,15%);
   .gradient(lighten(@color,3%), darken(@color,3%));
 
-  &:hover {
-    .gradient(darken(@color,5%), darken(@color,5%));
-  }
-  &:active, &.active {
+  &.active {
     .shadow(0 @pad/8 0 darken(@color,15%));
     top: @bpad*2;
     position: relative;
@@ -34,7 +30,6 @@
 }
 
 .btn-skmrph(@color: @color-btn) {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -45,10 +40,7 @@
   .gradient(lighten(@color,10%), darken(@color,10%));
   padding: @pad @pad2;
   .bold;
-  &:hover {
-    .gradient(lighten(@color,15%), darken(@color,15%));
-  }
-  &:active, &.active {
+  &.active {
     .gradient(lighten(@color,10%), darken(@color, 20%));
     box-shadow: inset 0 0 @pad fadeout(@color-txt,40%);
     //border-color: darken(@color,27%);
@@ -56,7 +48,6 @@
 }
 
 .btn-simple(@color: @color-btn) {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -66,11 +57,7 @@
   color: lighten(@color,40%);
   .gradient(lighten(@color,3%), darken(@color,3%));
 
-  &:hover {
-    .gradient(darken(@color,3%), darken(@color,8%));
-    color: lighten(@color,50%);
-  }
-  &:active, &.active {
+  &.active {
     .gradient(darken(@color,15%), darken(@color,15%));
     color: lighten(@color,10%);
     border: @bpad solid darken(@color,25%);
@@ -89,7 +76,7 @@
       font-size: @small;
       color: darken(@color,60%);
       .bold;
-      &:hover, &:active, &.active {
+      &.active {
         color: @color-txt;
         .text {
           border-bottom: @bpad solid;
@@ -133,7 +120,7 @@
 }
 
 .label(@color: @color-accent) {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  
   text-shadow: @bpad @bpad @bpad @color-back;
   .gradient(lighten(@color,15%),@color);
   display: inline-block;
@@ -145,7 +132,6 @@
   box-shadow: @bpad @bpad @bpad @color-border;
 }
 .nick(@color: @color-txt) {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
   .icon-caret-left;
   position: absolute;
   text-shadow: none;
@@ -155,7 +141,6 @@
   z-index: 0;
 }
 .tag() { // Надо обновить
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
   display: inline-block;
   padding: @pad/2 @pad2;
   margin: @pad2/2 @pad2/4;
@@ -164,7 +149,7 @@
   font-size: @tiny;
   color: @color-txt3;
   .radius(@bpad*2);
-  &.active, &:hover, &:active {
+  &.active {
     color: @color-link;
     background-color: @color-back2;
   }
@@ -182,7 +167,7 @@
 //                                                                                
 //                                                                                                                                                 
 .button-style(){
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  
   .unsel();
   .radius(@pad);
   display: inline-block;
@@ -267,7 +252,6 @@
               inset 0px 1px 0px rgba(255,255,255,.6),
               inset 0px 0px 0px 1px rgba(255,255,255,.3);
               
-  &:active,
   &.active{
     box-shadow: inset 0px 2px 5px rgba(0,0,0,.5),
                 0px 3px 3px @box-shadow;
