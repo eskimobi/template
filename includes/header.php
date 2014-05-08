@@ -8,12 +8,12 @@
   <meta name="format-detection" content="telephone=no" />
   
   <!--realtime less compiler-->
- <link rel="stylesheet/less" type="text/css" href="css/style.less">
- <script src="js/less-1.3.3.min.js" type="text/javascript"></script>
-  
-  <!--это для скопмилированного css
-  <link rel="stylesheet" href="css/style.css">
-  -->
+  <link rel="stylesheet/less" type="text/css" href="css/style.less">
+  <script src="js/less-1.3.3.min.js" type="text/javascript"></script>
+   
+  <!--это для скопмилированного css-->
+  <!--<link rel="stylesheet" href="css/style.css">-->
+
   <!--apple web app-->
   <meta name="apple-mobile-web-app-title" content="eski.mobi">
   
@@ -23,14 +23,11 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple/144.png" />
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple/144.png" />
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <!--для live refresh-->
-  <!--использовать только при локальной разработке
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
- -->
-<meta name="MobileOptimized" content="320" />
- <!-- этот meta-тег должен быть ПОСЛЕДНИМ meta-тегом -->
- <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0" />
- <!-- этот meta-тег должен быть ПОСЛЕДНИМ meta-тегом -->
+
+  <meta name="MobileOptimized" content="320" />
+  <!-- этот meta-тег должен быть ПОСЛЕДНИМ meta-тегом -->
+  <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0" />
+  <!-- этот meta-тег должен быть ПОСЛЕДНИМ meta-тегом -->
   </head>
 <body id="top_page">
 
@@ -46,22 +43,22 @@
     </li>
   </ul>
   <ul class='header fixed'>
-    <li id='cart' class="btn">
+    <li id='cart' class="link">
     </li>
-    <li id='user' class="btn">
+    <li id='user' class="link">
     </li>
   </ul>
   <ul class='header navi'>
-    <li id='search' class="btn">
+    <li id='search' class="link">
       <a href='javascript:void(0)'></a>
     </li>
-    <li id='cart' class="btn">
+    <li id='cart' class="link">
       <a href='javascript:void(0)'></a>
     </li>
-    <li id='menu' class="btn">
+    <li id='menu' class="link">
       <a href='javascript:void(0)'>Каталог</a>
     </li>
-    <li id='region' class="btn">
+    <li id='region' class="link">
       <a href='javascript:void(0)'>Регион</a>
     </li>
   </ul>

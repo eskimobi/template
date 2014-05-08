@@ -38,7 +38,7 @@ var bullets = $('#position > li');
 // Показать верхнее меню
 // ----------------------------
 
-$('header .btn a').bind('click',function() {
+$('header .link a').bind('click',function() {
   var thisLink = $(this);
   var openBlockId = thisLink.parent().attr('id');
   var openBlockId = openBlockId+'Body';
@@ -46,7 +46,7 @@ $('header .btn a').bind('click',function() {
   openBlock.slideToggle();
   thisLink.toggleClass('active');
   $('.hidden-block').not(openBlock).slideUp();
-  $('header .btn a').not(thisLink).removeClass('active');
+  $('header .link a').not(thisLink).removeClass('active');
 });
 
 

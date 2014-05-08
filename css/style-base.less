@@ -34,7 +34,9 @@ img{
 	margin: 0 auto;
 	max-width: @max-width;
 }
-
+.pad{
+  padding: @pad2;
+}
 
 //   /$$$$$$$$                                                                   /$$                
 //  |__  $$__/                                                                  | $$                
@@ -119,7 +121,7 @@ input, button, textarea {
 	}
 	&[type='submit'],
 	&[type='button'] {
-	.btn-skmrph;
+	.btn();
 	}
 	&[type="radio"],
 	&[type="checkbox"] {
@@ -130,8 +132,7 @@ input, button, textarea {
 	}
 }
 button {
-	.btn-skmrph;
-	margin: @pad/2 0 @pad;
+	.btn();
 }
 select {	
 	padding: 0;
@@ -239,7 +240,7 @@ header {
 				}
 			}
 		}
-		.btn {
+		.link{
 			text-align: center;
 			a {
 				padding: @pad*2;
@@ -350,7 +351,7 @@ footer{
 	}
 }
 
-a.full {
+a.desktop{
 	.radius(@pad*4);
 	margin: @pad/2 0;
 	padding: @pad @pad*2;

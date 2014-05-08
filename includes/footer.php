@@ -1,10 +1,9 @@
 </div><!--end root-->
 
-<div class="pre-footer"></div>
 <footer>
   <div class="wrap">
   <div class="x">
-    <a class="full" href="javascript:void(0)" onclick="if(window.confirm('Внимание! Вы действительно хотите покинуть мобильный сайт и перейти к полной версии?')){Eski.desktop();ga('send','event','desktop','click');}return false;">Полная версия сайта</a>
+    <a class="desktop" href="javascript:void(0)" onclick="if(window.confirm('Внимание! Вы действительно хотите покинуть мобильный сайт и перейти к полной версии?')){Eski.desktop();ga('send','event','desktop','click');}return false;">Полная версия сайта</a>
   </div>
   
   <div class="wrap x">

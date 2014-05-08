@@ -1,3 +1,8 @@
+@color-link: #0390d8;
+@color-link-hover: lighten(@color-link,20%);
+@color-accent: #1B9CD8;
+@color-accent2: #237888;
+@color-btn: @color-accent2;
 
 @color-border: rgba(0,0,0,.15);
 @color-border-w: rgba(255,255,255,.3);
@@ -11,30 +16,10 @@
 @color-txt2: lighten(@color-txt,20%);
 @color-txt3: lighten(@color-txt,40%);
 @color-back: #fff; 
-@color-back2: #fff; // переименовать в что-то типа back-dark
+@color-back2: #fff;
 @color-back3: #338DCC;
 @color-back4: rgba(0,0,0,.05);
 
-
-@color-link: #aa5500;
-@color-link-hover: lighten(@color-link,20%);
-@color-accent: #1B9CD8;
-@color-accent2: #237888;
-@color-btn: @color-accent2;
-
-//   /$$$$$$$                                       /$$$$$$   /$$               /$$                    
-//  | $$__  $$                                     /$$__  $$ | $$              | $$                    
-//  | $$  \ $$  /$$$$$$   /$$$$$$$  /$$$$$$       | $$  \__//$$$$$$   /$$   /$$| $$  /$$$$$$   /$$$$$$$
-//  | $$$$$$$  |____  $$ /$$_____/ /$$__  $$      |  $$$$$$|_  $$_/  | $$  | $$| $$ /$$__  $$ /$$_____/
-//  | $$__  $$  /$$$$$$$|  $$$$$$ | $$$$$$$$       \____  $$ | $$    | $$  | $$| $$| $$$$$$$$|  $$$$$$ 
-//  | $$  \ $$ /$$__  $$ \____  $$| $$_____/       /$$  \ $$ | $$ /$$| $$  | $$| $$| $$_____/ \____  $$
-//  | $$$$$$$/|  $$$$$$$ /$$$$$$$/|  $$$$$$$      |  $$$$$$/ |  $$$$/|  $$$$$$$| $$|  $$$$$$$ /$$$$$$$/
-//  |_______/  \_______/|_______/  \_______/       \______/   \___/   \____  $$|__/ \_______/|_______/ 
-//                                                                    /$$  | $$                        
-//                                                                   |  $$$$$$/                        
-// 
-/* Базовые стили, просто к тегам, частовстречающимся классам */
-/* Swipe 2 required styles */
 .swipe {
   overflow: hidden;
   visibility: hidden;
@@ -75,9 +60,7 @@
 		.ellipsis;
 	}
 }
-
 .box {
-	margin: @pad-list;
 	&#first {
 		h3 {
 			.ellipsis;
@@ -91,28 +74,15 @@
 			.hint('.chevronlist');
 		}
 	}
-	&#second {
-		a {
-			&.flat {
-				.btn-flat(#F47920);
-				display: block;
-			}
-			&.skmrph {
-				.btn-skmrph(#873656);
-			}
-			&.simple {
-				.btn-simple(#4756f9);
-			}
-		}
-	}
 	&#fourth {
 		.paginator {
 			text-align: center;
 			.hint('.inliner;');
 			.inliner;
 			a {
-				.btn-simple(@grey2);
-				color: @color-txt3;
+				/*custom-кнопка: цвет текста и фона*/
+				.btn-custom(red,green);
+				/*.flat(blue,green);*/
 				margin-right: @pad;
 			}
 		}
