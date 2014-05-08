@@ -38,7 +38,7 @@
   
   <ul class='header top-line'>
     <li class='logo'>
-      <a href='javascipt:;'><img src="//sendflowers.ru/img/sendflowers3/main/header-logo.png"></a>
+      <a href='javascript:void(0)'><img src="//sendflowers.ru/img/sendflowers3/main/header-logo.png"></a>
     </li>
     <li class='tel'>
       <a href="tel:8002007090">8 800 200-70-90</a>
@@ -53,16 +53,16 @@
   </ul>
   <ul class='header navi'>
     <li id='search' class="btn">
-      <a href='javascipt:;'></a>
+      <a href='javascript:void(0)'></a>
     </li>
     <li id='cart' class="btn">
-      <a href='javascipt:;'></a>
+      <a href='javascript:void(0)'></a>
     </li>
     <li id='menu' class="btn">
-      <a href='javascipt:;'>Каталог</a>
+      <a href='javascript:void(0)'>Каталог</a>
     </li>
     <li id='region' class="btn">
-      <a href='javascipt:;'>Регион</a>
+      <a href='javascript:void(0)'>Регион</a>
     </li>
   </ul>
 
