@@ -31,77 +31,85 @@
   </head>
 <body id="top_page">
 
-<header>
-  
-  <ul class='header top-line'>
-    <li class='logo'>
-      <a href='javascript:void(0)'><img src="//sendflowers.ru/img/sendflowers3/main/header-logo.png"></a>
-    </li>
-    <li class='tel'>
-      <a href="tel:8002007090">8 800 200-70-90</a>
-      <a href="tel:8002007090">+7 495 974-70-90</a>
-    </li>
-  </ul>
-  <ul class='header fixed'>
-    <li id='cart' class="link">
-    </li>
-    <li id='user' class="link">
-    </li>
-  </ul>
-  <ul class='header navi'>
-    <li id='search' class="link">
-      <a href='javascript:void(0)'></a>
-    </li>
-    <li id='cart' class="link">
-      <a href='javascript:void(0)'></a>
-    </li>
-    <li id='menu' class="link">
-      <a href='javascript:void(0)'>Каталог</a>
-    </li>
-    <li id='region' class="link">
-      <a href='javascript:void(0)'>Регион</a>
-    </li>
-  </ul>
-
-  <div id='menuBody' class='hidden-block'>
-
-  	<ul>
-  		<li><a>Тестовый chevron-список 1</a></li>
-  		<li><a>Тестовый chevron-список 1</a></li>
-  		<li><a>Тестовый chevron-список 1</a></li>
-  		<li><a>Тестовый chevron-список 1</a></li>
-  		<li><a>Тестовый chevron-список 1</a></li>
-  		<li><a>Тестовый chevron-список очень длинное название</a></li>
-  	</ul>
+<div id="page">
+  <div id="navigation">
   </div>
 
+  <div id="content-wrapper">
+    <header>
+      
+      <ul class='header top-line'>
+        <li id='side-menu'>
+          <a href='javascript:void(0)'>Боковое меню</a>
+        </li>
+        <li class='logo'>
+          <a href='javascript:void(0)'><img src="//sendflowers.ru/img/sendflowers3/main/header-logo.png"></a>
+        </li>
+        <li class='tel'>
+          <a href="tel:8002007090">8 800 200-70-90</a>
+          <a href="tel:8002007090">+7 495 974-70-90</a>
+        </li>
+      </ul>
+      <ul class='header fixed'>
+        <li id='cart' class="link">
+        </li>
+        <li id='user' class="link">
+        </li>
+      </ul>
+      <ul class='header navi'>
+        <li id='search' class="link">
+          <a href='javascript:void(0)'></a>
+        </li>
+        <li id='cart' class="link">
+          <a href='javascript:void(0)'></a>
+        </li>
+        <li id='menu' class="link">
+          <a href='javascript:void(0)'>Каталог</a>
+        </li>
+        <li id='region' class="link">
+          <a href='javascript:void(0)'>Регион</a>
+        </li>
+      </ul>
+
+      <div id='menuBody' class='hidden-block'>
+
+      	<ul>
+      		<li><a>Тестовый chevron-список 1</a></li>
+      		<li><a>Тестовый chevron-список 1</a></li>
+      		<li><a>Тестовый chevron-список 1</a></li>
+      		<li><a>Тестовый chevron-список 1</a></li>
+      		<li><a>Тестовый chevron-список 1</a></li>
+      		<li><a>Тестовый chevron-список очень длинное название</a></li>
+      	</ul>
+      </div>
 
 
-  <div id='regionBody' class='hidden-block'>
-  	<ul>
-  		<li><a>Тестовый chevron-список</a></li>
-  		<li><a>Тестовый chevron-список</a></li>
-  		<li><a>Тестовый chevron-список</a></li>
-  		<li><a>Тестовый chevron-список</a></li>
-  		<li><a>Тестовый chevron-список</a></li>
-  		<li><a>Тестовый chevron-список очень длинное название</a></li>
-  	</ul>
-  </div>
 
-  <div id='searchBody' class='hidden-block'>
-  	<ul>
-  		<li><a>Иконка по вертикали центруется с помощью position: absolute;,  top: 50%; margin-top: -@pad;</a></li>
-  	</ul>
-  </div>
+      <div id='regionBody' class='hidden-block'>
+      	<ul>
+      		<li><a>Тестовый chevron-список</a></li>
+      		<li><a>Тестовый chevron-список</a></li>
+      		<li><a>Тестовый chevron-список</a></li>
+      		<li><a>Тестовый chevron-список</a></li>
+      		<li><a>Тестовый chevron-список</a></li>
+      		<li><a>Тестовый chevron-список очень длинное название</a></li>
+      	</ul>
+      </div>
+
+      <div id='searchBody' class='hidden-block'>
+      	<ul>
+      		<li><a>Иконка по вертикали центруется с помощью position: absolute;,  top: 50%; margin-top: -@pad;</a></li>
+      	</ul>
+      </div>
 
 
-  <div id='cartBody' class='hidden-block'>
+      <div id='cartBody' class='hidden-block'>
 
-  	<ul>
-  		<li><a>Шаблон для вложенных списков пока в процессе доработки</a></li>
-  	</ul>
-  </div>
+      	<ul>
+      		<li><a>Шаблон для вложенных списков пока в процессе доработки</a></li>
+      	</ul>
+      </div>
 
-</header>
+    </header>
 
-<div id="eski-root">
+    <div id="eski-root">
