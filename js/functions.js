@@ -32,6 +32,14 @@ var bullets = $('#position > li');
 
 
 
+
+$(window).scroll(function(){
+  if ($(this).scrollTop() > 1000) {
+    $('#backToTop').addClass('show');
+  } else {
+    $('#backToTop').removeClass('show');
+  }
+})
 // ----------------------------
 // Боковое меню
 // ----------------------------

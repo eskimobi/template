@@ -30,7 +30,7 @@
   <!-- этот meta-тег должен быть ПОСЛЕДНИМ meta-тегом -->
   </head>
 <body id="top_page">
-
+<a href="top_page" id="backToTop">Наверх</a>
 <div id="page">
   <div id="navigation">
   </div>

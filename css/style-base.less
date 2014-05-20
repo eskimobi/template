@@ -44,6 +44,30 @@ img{
 	-o-transform: 		 translate3d(@x, @y, @z);
 }
 @slide-px: 15rem;
+
+#backToTop {
+	position: fixed;
+	top: -@pad*10;
+	.radius(@pad);
+	text-decoration: none;
+	width: 280px;
+	left: 50%;
+	background: desaturate(@color-accent,10%);
+	color: @color-back;
+	text-align: center;
+	padding: @pad;
+	margin-left: -140px;
+	.large;
+	z-index: 9999999;
+
+	.transitions(all,1s);
+	opacity: 0;
+	&.show {
+		display: block;
+		opacity: .9;
+		top: @pad;
+	}
+}
 #page {
 
 	overflow: hidden;
