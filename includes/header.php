@@ -8,11 +8,11 @@
   <meta name="format-detection" content="telephone=no" />
   
   <!--realtime less compiler-->
-  <link rel="stylesheet/less" type="text/css" href="css/style.less">
+  <link rel="stylesheet/less" type="text/css" href="css/style.less?{rand}">
   <script src="js/less-1.3.3.min.js" type="text/javascript"></script>
    
   <!--это для скопмилированного css-->
-  <!--<link rel="stylesheet" href="css/style.css">-->
+  <!--<link rel="stylesheet" href="css/style.css?{rand}">-->
 
   <!--apple web app-->
   <meta name="apple-mobile-web-app-title" content="eski.mobi">

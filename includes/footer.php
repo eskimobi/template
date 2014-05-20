@@ -19,7 +19,7 @@
 </div> <!-- page -->
 
 <script src="js/jquery.min.js"></script>
-<script src="js/functions.js" type="text/javascript"></script>
+<script src="js/functions.js?{rand}" type="text/javascript"></script>
 
 <script src="js/swipe/swipe.js"></script>
 
