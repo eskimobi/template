@@ -19,9 +19,12 @@
 </div> <!-- page -->
 
 <script src="js/jquery.min.js"></script>
+
+<link rel="stylesheet" href="js/flexslider/flexslider.css" type="text/css" media="screen">
+<script src="js/flexslider/jquery.flexslider.js" type="text/javascript"></script>
 <script src="js/functions.js?{rand}" type="text/javascript"></script>
 
-<script src="js/swipe/swipe.js"></script>
+<!--<script src="js/swipe/swipe.js"></script>-->
 
 <!--uptime monitor-->
 <script>
