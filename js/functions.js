@@ -5,6 +5,10 @@ $(document).ready(function(){
 // Главная страница
 document.addEventListener("touchstart", function(){}, true);
 
+  $('#backToTop').bind('click', function(){
+    $('html, body').animate({scrollTop: 0});
+  });
+
 
 /*var numSlides = $('.slider-wrapper > *').length;
 var lishki = '<li class="on" onclick="mySwipe.slide(0,400)"></li>'
