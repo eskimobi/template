@@ -6,7 +6,7 @@ $(document).ready(function(){
 document.addEventListener("touchstart", function(){}, true);
 
 
-var numSlides = $('.slider-wrapper > *').length;
+/*var numSlides = $('.slider-wrapper > *').length;
 var lishki = '<li class="on" onclick="mySwipe.slide(0,400)"></li>'
 for (var i = 1; i < numSlides; i++) {
   lishki+= '<li class="" onclick="mySwipe.slide('+i+',400)"></li>'
@@ -26,7 +26,7 @@ window.mySwipe = new Swipe(document.getElementById('slider'), {
 
     }
 });
-var bullets = $('#position > li');
+var bullets = $('#position > li');*/
 
 });
 
@@ -83,7 +83,7 @@ $('.view-group > .view:first-child').show();
 // ----------------------------
 // Плавная прокрутка
 // ----------------------------
- function filterPath(string) {
+/* function filterPath(string) {
   return string
     .replace(/^\//,'')
     .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
@@ -127,4 +127,4 @@ $('.view-group > .view:first-child').show();
       }
     }
     return [];
-  }
+  } */
