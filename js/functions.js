@@ -49,8 +49,8 @@ $(window).scroll(function(){
 // ----------------------------
 
 $('#side-menu').on('click',function(){
-  $(this).toggleClass('active');
-  $('#page').toggleClass('')
+  //$(this).toggleClass('active');
+  $('#page').toggleClass('opened');
 })
 
 // ----------------------------

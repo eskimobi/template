@@ -1,4 +1,5 @@
 <?php include ('includes/header.php'); ?>
+
 <div class="wrap pad">
    <div id="slider" class="swipe">
       <div class="slider-wrapper">
@@ -18,7 +19,7 @@
          <li><a href="">Два</a></li>
          <li><a href="">Три</a></li>
       </ul>
-      <ul class="chevronlist">
+      <ul class="group flat">
          <li><a href="">Раз</a></li>
          <li><a href="">Два</a></li>
          <li><a href="">Три</a></li>
@@ -31,11 +32,21 @@
       <button>Button</button>
       <input type="submit" value="<input type='submit'>">
       <a class="btn">Обычная, класс .btn</a>
-      <a class="btn-flat">Плоская, класс .btn-flat</a>
       <br/><br/>
       <p>Кнопки по всей ширине с классом full</p>
       <a class="btn full">Обычная, по всей ширине</a>
-      <a class="btn-flat full">Плоская, по всей ширине</a>
+      
+      <br/>
+      
+      <div class="btn-group">
+        <div class="inside">
+          <a href="#" class="btn">Link Text</a>
+          <a href="#" class="btn">Link Text</a>
+        </div>
+        <div class="view-group">
+        
+        </div>
+      </div>
    </div>
    <div class="box" id="fourth">
       <ul class="paginator">
@@ -46,11 +57,11 @@
          <li><a>5</a></li>
       </ul>
       <div class="socio">
-         <a href="http://www.youtube.com/user/tv3russia" target="blank"> <img src="/upload/footer/1.png" width="16" height="16"></a>
-         <a href="https://www.facebook.com/kanaltv3" target="blank"> <img src="/upload/footer/2.png" width="18" height="16"></a>
-         <a href="http://twitter.com/tv3russia" target="blank"> <img src="/upload/footer/3.png" width="14" height="16"></a>
-         <a href="http://vk.com/kanal_tv3" target="blank"> <img src="/upload/footer/4.png" width="16" height="16"></a>
-         <a href="http://www.odnoklassniki.ru/kanaltv3" target="blank"> <img src="/upload/footer/5.png" width="16" height="16"></a>
+         <a href="http://www.youtube.com/user/tv3russia" target="blank"> <img src="" width="16" height="16"></a>
+         <a href="https://www.facebook.com/kanaltv3" target="blank"> <img src="" width="18" height="16"></a>
+         <a href="http://twitter.com/tv3russia" target="blank"> <img src="" width="14" height="16"></a>
+         <a href="http://vk.com/kanal_tv3" target="blank"> <img src="" width="16" height="16"></a>
+         <a href="http://www.odnoklassniki.ru/kanaltv3" target="blank"> <img src="" width="16" height="16"></a>
       </div>
    </div>
    <div class="box" id="fifth">

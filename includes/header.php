@@ -30,24 +30,23 @@
   <!-- этот meta-тег должен быть ПОСЛЕДНИМ meta-тегом -->
   </head>
 <body id="top_page">
-<a href="top_page" id="backToTop">Наверх</a>
+<!--<a href="javascript:void(0)" id="backToTop">Наверх</a>-->
 <div id="page">
   <div id="navigation">
+    Состав бокового меню
   </div>
 
   <div id="content-wrapper">
     <header>
-      
       <ul class='header top-line'>
         <li id='side-menu'>
-          <a href='javascript:void(0)'>Боковое меню</a>
+          <a href='javascript:void(0)'>Меню</a>
         </li>
         <li class='logo'>
           <a href='javascript:void(0)'><img src="//sendflowers.ru/img/sendflowers3/main/header-logo.png"></a>
         </li>
         <li class='tel'>
           <a href="tel:8002007090">8 800 200-70-90</a>
-          <a href="tel:8002007090">+7 495 974-70-90</a>
         </li>
       </ul>
       <ul class='header fixed'>
